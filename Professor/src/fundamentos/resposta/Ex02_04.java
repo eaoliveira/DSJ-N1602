@@ -9,7 +9,7 @@ public class Ex02_04 {
 		
 		for (int i = 0; i < val.length; i++) {
 			val[i] = EntradaDados.leInteiro("informe o "+(i+1)+"º valor");
-			soma += val[i];  // media = media + val[i];
+			soma += val[i];  // soma = soma + val[i];
 		}
 
 		String msg = "Soma: " + soma + "\nMédia: " + (soma/val.length);
