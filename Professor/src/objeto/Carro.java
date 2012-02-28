@@ -11,7 +11,6 @@ public class Carro {
     	 cor = "preto";
     	 aro = 13;
      }
-     
      // Construtor
      public Carro(int ano, int aro, String cor) {
 			 setAno(ano);
