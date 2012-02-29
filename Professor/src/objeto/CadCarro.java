@@ -5,10 +5,11 @@ public class CadCarro {
  	public static void main(String[] args) {
 		Carro[] garage = new Carro[3];
 		
-	  Carro a = new Carro();  // construtor padrão
+	  Utilitario a = new Utilitario();  // construtor padrão
 		a.setAno(1995);
 		a.setAro(15);
 		a.setCor("branco");
+		a.setCapacidade(250.5);
 		garage[0] = a;
 		
 		garage[1] = new Carro();
