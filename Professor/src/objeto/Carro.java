@@ -2,49 +2,60 @@ package objeto;
 
 // POJO
 public class Carro {
-     private int aro;
-     private String cor;
-     private int ano;
-     
-     public Carro() {
-    	 ano = 2000;
-    	 cor = "preto";
-    	 aro = 13;
-     }
-     // Construtor
-     public Carro(int ano, int aro, String cor) {
-			 setAno(ano);
-			 setAro(aro);
-			 setCor(cor);
-		}
+	private int aro;
+	private String cor;
+	private int ano;
+	private Banco bancos;
 
-		public int getAro() {
-    	 return aro;
-     }
+	public Carro() {
+		ano = 2000;
+		cor = "preto";
+		aro = 13;
+	}
 
-     public void setAro(int aro) {
-    	 this.aro = aro;
-     }
-     
-     public String getCor() {
-    	 return cor;
-     }
-     
-     public void setCor(String cor) {
-    	 this.cor = cor;
-     }
-     
-     public int getAno() {
-    	 return ano;
-     }
-     
-     public void setAno(int ano) {
-    	 this.ano = ano;
-     }
+	// Construtor
+	public Carro(int ano, int aro, String cor) {
+		setAno(ano);
+		setAro(aro);
+		setCor(cor);
+	}
 
-     public String toString() {
-  	 return "Carro ano: " + ano +
-  			          " Cor: " + cor +
-  			          " Aro: " + aro;
-     }
+	public int getAro() {
+		return aro;
+	}
+
+	public void setAro(int aro) {
+		this.aro = aro;
+	}
+
+	public String getCor() {
+		return cor;
+	}
+
+	public void setCor(String cor) {
+		this.cor = cor;
+	}
+
+	public int getAno() {
+		return ano;
+	}
+
+	public void setAno(int ano) {
+		this.ano = ano;
+	}
+
+	public Banco getBancos() {
+		return bancos;
+	}
+
+	public void setBancos(Banco bancos) {
+		this.bancos = bancos;
+	}
+
+	@Override
+	public String toString() {
+		return "aro:" + aro + " cor:" + cor + " ano:" + ano + " bancos:" + bancos;
+	}
+
+
 }
