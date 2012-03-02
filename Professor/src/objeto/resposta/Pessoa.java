@@ -2,14 +2,14 @@ package objeto.resposta;
 
 public class Pessoa {
 	private String nome;
-	private String endereco;
+	private Endereco endereco;
 	private String fone;
 	
 	public Pessoa() {
 		super();
 	}
 
-	public Pessoa(String nome, String endereco, String fone) {
+	public Pessoa(String nome, Endereco endereco, String fone) {
 		this.nome = nome;
 		this.endereco = endereco;
 		this.fone = fone;
@@ -23,11 +23,11 @@ public class Pessoa {
 		this.nome = nome;
 	}
 
-	public String getEndereco() {
+	public Endereco getEndereco() {
 		return endereco;
 	}
 
-	public void setEndereco(String endereco) {
+	public void setEndereco(Endereco endereco) {
 		this.endereco = endereco;
 	}
 

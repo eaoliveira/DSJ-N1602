@@ -31,8 +31,22 @@ public class CadPessoas {
 	public static void cadPessoa(Pessoa p) {
     String aux = JOptionPane.showInputDialog("informe o nome");
     p.setNome(aux);
-    aux = JOptionPane.showInputDialog("informe o end.");
-    p.setEndereco(aux);
+    Endereco e = new Endereco();
+    aux = JOptionPane.showInputDialog("informe o Logr.");
+    e.setLogradouro(aux);
+    aux = JOptionPane.showInputDialog("informe o No.");
+    e.setNumero(aux);
+    aux = JOptionPane.showInputDialog("informe o Compl.");
+    e.setComplemento(aux);
+    aux = JOptionPane.showInputDialog("informe o Bairro");
+    e.setBairro(aux);
+    aux = JOptionPane.showInputDialog("informe o CEP");
+    e.setCep(aux);
+    aux = JOptionPane.showInputDialog("informe o Cidade");
+    e.setCidade(aux);
+    aux = JOptionPane.showInputDialog("informe o Estado");
+    e.setEstado(aux);
+    p.setEndereco(e);
     aux = JOptionPane.showInputDialog("informe o fone");
     p.setFone(aux);
 		
