@@ -31,6 +31,8 @@ public class CadPessoa {
 			lista[i] = p;
 		}
 		
+	java.util.Arrays.sort(lista);
+	
 		String txt = "Cad de Pessoas\n\n";
 		for (Pessoa p : lista) 
 			txt += p + "\n";

@@ -1,6 +1,6 @@
 package objeto.resposta;
 
-public class Pessoa {
+public class Pessoa implements Comparable<Pessoa>{
 	private String nome;
 	private Endereco endereco;
 	private String fone;
@@ -42,6 +42,17 @@ public class Pessoa {
 	@Override
 	public String toString() {
 		return "Nome:" + nome + " End.:" + endereco + " Fone:" + fone;
+	}
+
+	@Override
+	public int compareTo(Pessoa o) {
+//		int este = this instanceof PessoaFisica ? 1 : 2;
+//		int outro = o instanceof PessoaFisica ? 1 : 2;
+//		int r = este - outro;
+//		if(r == 0)
+			int r = nome.compareTo(o.nome);
+		
+		return r;
 	}
 	
 }
