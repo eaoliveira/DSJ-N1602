@@ -1,7 +1,7 @@
 package objeto;
 
 // POJO
-public class Carro {
+public class Carro implements Comparable<Carro> {
 	private int aro;
 	private String cor;
 	private int ano;
@@ -12,7 +12,6 @@ public class Carro {
 		cor = "preto";
 		aro = 13;
 	}
-
 	// Construtor
 	public Carro(int ano, int aro, String cor) {
 		setAno(ano);
@@ -55,6 +54,14 @@ public class Carro {
 	@Override
 	public String toString() {
 		return "aro:" + aro + " cor:" + cor + " ano:" + ano + " bancos:" + bancos;
+	}
+
+	@Override
+	public int compareTo(Carro o) {
+		int r =  -(ano - o.ano);
+		if(r == 0)
+			r = cor.compareTo(o.cor);
+		return r;
 	}
 
 

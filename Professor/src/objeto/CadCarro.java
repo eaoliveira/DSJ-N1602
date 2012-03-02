@@ -17,7 +17,7 @@ public class CadCarro {
 		b.setAjusteDeAltura(false);
 		b.setEncostoCabeca(true);
 		a.setBancos(b);
-		garage[0] = a;
+		garage[2] = a;
 		
 		garage[1] = new Carro();
 		garage[1] .setAno(2012);
@@ -30,8 +30,10 @@ public class CadCarro {
 		b.setEncostoCabeca(true);
 		garage[1].setBancos(b);
 		
-		garage[2] = new Carro(2011, 14, "amarelo");
-		garage[2].setBancos(b);
+		garage[0] = new Carro(1995, 14, "amarelo");
+		garage[0].setBancos(b);
+		
+		java.util.Arrays.sort(garage);
 		
 		for (int i = 0; i < garage.length; i++) {
 			System.out.println(garage[i]);
