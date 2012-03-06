@@ -1,7 +1,8 @@
 package objeto;
 
+import java.awt.Dimension;
 import java.awt.EventQueue;
-import java.awt.Graphics;
+import java.awt.Toolkit;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -10,6 +11,7 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.border.EmptyBorder;
 
+@SuppressWarnings("serial")
 public class NovaTela4 extends JFrame {
 
 	private JPanel contentPane;
@@ -39,8 +41,12 @@ public class NovaTela4 extends JFrame {
 	 */
 	public NovaTela4() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		Graphics g = getGraphics();
+		
+		Dimension d = Toolkit.getDefaultToolkit().getScreenSize();
+	  setBounds(0,0,d.width,d.height);
+	  
 		//setBounds(100, 100, 450, 300)
+	  
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
