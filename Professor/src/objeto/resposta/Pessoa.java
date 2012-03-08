@@ -1,10 +1,10 @@
 package objeto.resposta;
 
-public class Pessoa implements Comparable<Pessoa>{
+public class Pessoa implements Comparable<Pessoa> {
 	private String nome;
 	private Endereco endereco;
 	private String fone;
-	
+
 	public Pessoa() {
 		super();
 	}
@@ -46,13 +46,13 @@ public class Pessoa implements Comparable<Pessoa>{
 
 	@Override
 	public int compareTo(Pessoa o) {
-//		int este = this instanceof PessoaFisica ? 1 : 2;
-//		int outro = o instanceof PessoaFisica ? 1 : 2;
-//		int r = este - outro;
-//		if(r == 0)
-			int r = nome.compareTo(o.nome);
-		
+		int este = this instanceof PessoaFisica ? 1 : 2;
+		int outro = o instanceof PessoaFisica ? 1 : 2;
+		int r = este - outro;
+		if (r == 0)
+			r = nome.compareTo(o.nome);
+
 		return r;
 	}
-	
+
 }
