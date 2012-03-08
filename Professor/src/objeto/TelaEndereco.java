@@ -30,7 +30,7 @@ public class TelaEndereco extends JDialog {
 	public Endereco getEndereco() {
 		return end;
 	}
-	
+
 	public TelaEndereco() {
 		setModal(true);
 		setTitle("Endereço");
@@ -86,6 +86,7 @@ public class TelaEndereco extends JDialog {
 		tfUf = new JTextField();
 		tfUf.setBounds(289, 79, 114, 19);
 		tfUf.setColumns(10);
+		
 		contentPanel.setLayout(null);
 		contentPanel.add(lblLogr);
 		contentPanel.add(tfLogr);
@@ -101,35 +102,32 @@ public class TelaEndereco extends JDialog {
 		contentPanel.add(tfCep);
 		contentPanel.add(lblCidade);
 		contentPanel.add(tfCidade);
-		{
-			JPanel buttonPane = new JPanel();
-			buttonPane.setLayout(new FlowLayout(FlowLayout.RIGHT));
-			getContentPane().add(buttonPane, BorderLayout.SOUTH);
-			{
-				JButton okButton = new JButton("OK");
-				okButton.addActionListener(new ActionListener() {
-					public void actionPerformed(ActionEvent e) {
-						end = new Endereco();
-						end.setLogradouro(tfLogr.getText());
-						end.setNumero(tfNum.getText());
-						setVisible(false);
-					}
-				});
-				okButton.setActionCommand("OK");
-				buttonPane.add(okButton);
-				getRootPane().setDefaultButton(okButton);
+
+		JPanel buttonPane = new JPanel();
+		buttonPane.setLayout(new FlowLayout(FlowLayout.RIGHT));
+		getContentPane().add(buttonPane, BorderLayout.SOUTH);
+
+		JButton okButton = new JButton("OK");
+		okButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				end = new Endereco();
+				end.setLogradouro(tfLogr.getText());
+				end.setNumero(tfNum.getText());
+				setVisible(false);
 			}
-			{
-				JButton cancelButton = new JButton("Cancel");
-				cancelButton.addActionListener(new ActionListener() {
-					public void actionPerformed(ActionEvent e) {
-						end = null;
-						setVisible(false);
-					}
-				});
-				cancelButton.setActionCommand("Cancel");
-				buttonPane.add(cancelButton);
+		});
+		okButton.setActionCommand("OK");
+		buttonPane.add(okButton);
+		getRootPane().setDefaultButton(okButton);
+
+		JButton cancelButton = new JButton("Cancel");
+		cancelButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				end = null;
+				setVisible(false);
 			}
-		}
+		});
+		cancelButton.setActionCommand("Cancel");
+		buttonPane.add(cancelButton);
 	}
 }

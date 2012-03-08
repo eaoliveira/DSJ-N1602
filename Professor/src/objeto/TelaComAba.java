@@ -88,6 +88,7 @@ public class TelaComAba extends JFrame {
 		lblBeneficios.setBounds(31, 81, 110, 15);
 		panel_1.add(lblBeneficios);
 		
+		@SuppressWarnings("rawtypes")
 		JComboBox comboBox = new JComboBox();
 		comboBox.setBounds(159, 76, 157, 24);
 		panel_1.add(comboBox);
