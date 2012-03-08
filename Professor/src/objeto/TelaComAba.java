@@ -1,19 +1,21 @@
 package objeto;
 
-import java.awt.BorderLayout;
 import java.awt.EventQueue;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
+import javax.swing.JButton;
+import javax.swing.JComboBox;
+import javax.swing.JDialog;
 import javax.swing.JFrame;
-import javax.swing.JPanel;
-import javax.swing.border.EmptyBorder;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
-import javax.swing.JTextField;
+import javax.swing.JPanel;
 import javax.swing.JTabbedPane;
-import javax.swing.JComboBox;
-import javax.swing.JButton;
-import java.awt.event.ActionListener;
-import java.awt.event.ActionEvent;
+import javax.swing.JTextField;
+import javax.swing.border.EmptyBorder;
+
+import objeto.resposta.Endereco;
 
 public class TelaComAba extends JFrame {
 
@@ -22,7 +24,8 @@ public class TelaComAba extends JFrame {
 	private JTextField textField_1;
 	private JButton btOk;
 	private JButton btListar;
-
+	private JButton button;
+  private Endereco endereco;
 	/**
 	 * Launch the application.
 	 */
@@ -51,7 +54,7 @@ public class TelaComAba extends JFrame {
 		contentPane.setLayout(null);
 		
 		JLabel lblNome = new JLabel("Nome");
-		lblNome.setBounds(26, 12, 70, 15);
+		lblNome.setBounds(31, 12, 70, 15);
 		contentPane.add(lblNome);
 		
 		textField = new JTextField();
@@ -60,7 +63,7 @@ public class TelaComAba extends JFrame {
 		textField.setColumns(10);
 		
 		final JTabbedPane tabbedPane = new JTabbedPane(JTabbedPane.TOP);
-		tabbedPane.setBounds(26, 57, 408, 209);
+		tabbedPane.setBounds(26, 74, 408, 209);
 		contentPane.add(tabbedPane);
 		
 		JPanel panel = new JPanel();
@@ -100,7 +103,30 @@ public class TelaComAba extends JFrame {
 		contentPane.add(btOk);
 		
 		btListar = new JButton("Listar");
+		btListar.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				JOptionPane.showMessageDialog(null, endereco);
+			}
+		});
 		btListar.setBounds(167, 295, 117, 25);
 		contentPane.add(btListar);
+		
+		JLabel lblEnd = new JLabel("End.");
+		lblEnd.setBounds(31, 39, 70, 15);
+		contentPane.add(lblEnd);
+		
+		button = new JButton("...");
+		button.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				// continua ....
+				TelaEndereco dialog = new TelaEndereco();
+				dialog.setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
+				dialog.setVisible(true);
+
+				endereco = dialog.getEndereco();
+			}
+		});
+		button.setBounds(80, 39, 37, 25);
+		contentPane.add(button);
 	}
 }
