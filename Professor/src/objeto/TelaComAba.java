@@ -17,6 +17,7 @@ import javax.swing.border.EmptyBorder;
 
 import objeto.resposta.Endereco;
 
+@SuppressWarnings("serial")
 public class TelaComAba extends JFrame {
 
 	private JPanel contentPane;
