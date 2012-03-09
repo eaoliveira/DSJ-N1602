@@ -16,7 +16,6 @@ import java.util.List;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
-import javax.swing.JPopupMenu;
 import javax.swing.JTabbedPane;
 import javax.swing.JTextField;
 import javax.swing.SwingUtilities;
@@ -24,6 +23,7 @@ import javax.swing.SwingUtilities;
 @SuppressWarnings("serial")
 public class TelaPessoas extends JFrame implements ActionListener {
 	private List<Pessoa> lista = new ArrayList<>();
+  private Endereco endereco;
 	
 	private JTextField tfNome = new JTextField(20);
 	private JTextField tfFone = new JTextField(15);
@@ -56,7 +56,7 @@ public class TelaPessoas extends JFrame implements ActionListener {
 		tab.addTab(
 				"Juridica",
 				criaPainel(new GridLayout(3, 1), criaCampo("CNPJ", tfCnpj),
-						criaCampo("I.E.", tfIncr), criaCampo("Sitel", tfSite)));
+						criaCampo("I.E.", tfIncr), criaCampo("Site", tfSite)));
 
 		add(tab, "Center");
 
@@ -79,7 +79,7 @@ public class TelaPessoas extends JFrame implements ActionListener {
 				p.setRg(tfRg.getText());
 				p.setCpf(tfCpf.getText());
 				p.setEmail(tfEmail.getText());
-				
+				p.setEndereco(endereco);
 				lista.add(p);
 			} else {
 				PessoaJuridica p = new PessoaJuridica();
@@ -88,7 +88,7 @@ public class TelaPessoas extends JFrame implements ActionListener {
 				p.setCnpj(tfCnpj.getText());
 				p.setIncrEst(tfIncr.getText());
 				p.setSite(tfSite.getText());
-				
+				p.setEndereco(endereco);
 				lista.add(p);
 			}
 			
@@ -108,7 +108,9 @@ public class TelaPessoas extends JFrame implements ActionListener {
 			
 			JOptionPane.showMessageDialog(this, txt);
 		} else if (cmd.equals("...")) {
-
+				TelaEndereco tela = new TelaEndereco();
+				tela.setVisible(true);
+				endereco = tela.getEndereco();
 		} else {
 			System.exit(0);
 		}
