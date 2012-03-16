@@ -8,4 +8,10 @@ public class EntradaDados {
     int num = Integer.parseInt(aux);
     return num;
 	}
+
+	public static double leDouble(String msg) {
+		String aux = JOptionPane.showInputDialog(msg);
+    double num = Double.parseDouble(aux);
+		return num;
+	}
 }
