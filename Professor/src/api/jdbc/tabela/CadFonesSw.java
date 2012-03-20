@@ -19,9 +19,6 @@ import javax.swing.SwingUtilities;
 import javax.swing.table.TableColumn;
 import javax.swing.text.MaskFormatter;
 
-import objeto.old.Fone;
-import objeto.old.TipoFone;
-
 public class CadFonesSw extends JFrame {
 
   private static final long serialVersionUID = 1L;

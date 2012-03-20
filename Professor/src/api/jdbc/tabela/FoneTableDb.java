@@ -7,8 +7,6 @@ import java.sql.Statement;
 import javax.swing.JOptionPane;
 import javax.swing.table.AbstractTableModel;
 
-import objeto.old.Fone;
-import objeto.old.TipoFone;
 
 @SuppressWarnings("serial")
 public class FoneTableDb extends AbstractTableModel {
