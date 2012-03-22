@@ -66,7 +66,7 @@ public class TesteJasperReports {
 		} else {
 			try {
 				// Carrega o Relatorio compilado
-				InputStream jasper = RenderReport.class.getResourceAsStream("report1.jasper");
+				InputStream jasper = TesteJasperReports.class.getResourceAsStream("report1.jasper");
 
 				JasperReport jasperReport = (JasperReport) JRLoader.loadObject(jasper);
 
