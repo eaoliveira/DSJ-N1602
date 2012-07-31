@@ -9,8 +9,9 @@ public class CadPessoa {
 		for (int i = 0; i < lista.length; i++) {
 			Pessoa obj = new Pessoa();
 			obj.setNome(JOptionPane.showInputDialog("Informe o Nome"));
-			obj.setEndereco(JOptionPane.showInputDialog("Informe o End."));
-			obj.setTelefone(JOptionPane.showInputDialog("Informe o Fone"));
+			obj.getEndereco().setLogradouro(
+					JOptionPane.showInputDialog("Informe o End."));
+			obj.setFone(JOptionPane.showInputDialog("Informe o Fone"));
 			lista[i] = obj;
 		}
 		

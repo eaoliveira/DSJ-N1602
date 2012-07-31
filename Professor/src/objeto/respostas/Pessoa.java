@@ -1,10 +1,15 @@
 package objeto.respostas;
 
-public class Pessoa {
-	private String nome;
-	private String endereco;
-	private String telefone;
 
+public class Pessoa implements Comparable<Pessoa>{
+	private String nome;
+	private Endereco endereco;
+	private String fone;
+
+	public Pessoa() {
+		endereco = new Endereco();
+	}
+	
 	public String getNome() {
 		return nome;
 	}
@@ -13,25 +18,30 @@ public class Pessoa {
 		this.nome = nome;
 	}
 
-	public String getEndereco() {
+	public Endereco getEndereco() {
 		return endereco;
 	}
 
-	public void setEndereco(String endereco) {
+	public void setEndereco(Endereco endereco) {
 		this.endereco = endereco;
 	}
 
-	public String getTelefone() {
-		return telefone;
+	public String getFone() {
+		return fone;
 	}
 
-	public void setTelefone(String telefone) {
-		this.telefone = telefone;
+	public void setFone(String fone) {
+		this.fone = fone;
 	}
 
 	@Override
 	public String toString() {
-		return "Nome:" + nome + " Endereco:" + endereco + " Telefone:" + telefone;
+		return "nome:" + nome + " endereco:" + endereco + " fone:" + fone;
+	}
+
+	@Override
+	public int compareTo(Pessoa o) {
+		return nome.compareTo(o.nome);
 	}
 
 }
