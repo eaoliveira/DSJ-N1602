@@ -1,7 +1,5 @@
 package objeto.resposta;
 
-import objeto.respostas.Endereco;
-
 public class Pessoa implements Comparable<Pessoa>{
 	private String nome;
 	private Endereco endereco;
