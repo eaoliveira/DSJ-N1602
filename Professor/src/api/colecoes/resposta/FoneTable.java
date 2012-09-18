@@ -44,7 +44,7 @@ public class FoneTable extends AbstractTableModel {
 		case 1:
 			return "DDD";
 		case 2:
-			return "N�mero";
+			return "Numero";
 		default:
 			return null;
 		}
@@ -87,22 +87,6 @@ public class FoneTable extends AbstractTableModel {
 	}
 
 	public Class<?> getColumnClass(int column) {
-		// return getValueAt(0, column).getClass();
-
-		// Class clazz = null;
-		// switch (column) {
-		// case 0:
-		// clazz = String.class;
-		// break;
-		// case 1:
-		// clazz = String.class;
-		// break;
-		// case 2:
-		// clazz = String.class;
-		// break;
-		// }
-		//  	
-		// return clazz;
 
 		return String.class;
 	}
