@@ -19,16 +19,16 @@ public class InserirAluno {
 		PreparedStatement ins = con
 				.prepareStatement("insert into aluno (nome, matricula) values (?,?)");
 
+		// Insere dados na tabela Aluno
 		for (int i = 0; i < 3; i++) {
 			String nome = JOptionPane.showInputDialog("Informe o nome");
 			String matricula = JOptionPane.showInputDialog("Informe a matricula");
 
 			ins.setString(1, nome);
 			ins.setString(2, matricula);
-			ins.addBatch();
+			ins.execute();
 		}
-		ins.executeBatch();
-		
+
 		// Fechar a conexão
 		con.close();
 	}
