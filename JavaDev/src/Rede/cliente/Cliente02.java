@@ -35,6 +35,7 @@ public class Cliente02 extends JFrame implements ActionListener, Runnable {
 	private BufferedReader in;
 	private PrintWriter out;
 	private Thread thread; 
+	private boolean parar; 
 
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
@@ -100,6 +101,14 @@ public class Cliente02 extends JFrame implements ActionListener, Runnable {
 		getRootPane().setDefaultButton(btnEnviar);
 	}
 
+	public boolean isParar() {
+		return parar;
+	}
+
+	public void setParar(boolean parar) {
+		this.parar = parar;
+	}
+
 	public void actionPerformed(ActionEvent ev) {
 		String cmd = ev.getActionCommand();
 
@@ -110,7 +119,8 @@ public class Cliente02 extends JFrame implements ActionListener, Runnable {
 				out = new PrintWriter(skt.getOutputStream());
 				
 				// inicia a Thread de leitura dos dados do input Stream
-				thread = new Thread(this);   
+				thread = new Thread(this);  
+				parar = false;
 				thread.start();
    
 			    btnConectar.setEnabled(false);
@@ -129,9 +139,9 @@ public class Cliente02 extends JFrame implements ActionListener, Runnable {
 				out.flush();		    
 				
 				// Solicita a finalização da Thread
-				thread.interrupt();
+				parar = true;
 				// Aguarda pela finalização da Thread
-				thread.join();
+				//thread.join();
 				
 		        skt.close();
 		        
@@ -147,8 +157,8 @@ public class Cliente02 extends JFrame implements ActionListener, Runnable {
 			JOptionPane.showMessageDialog(this,
 					"Problemas com o acesso ao servidor");
 			ex.printStackTrace();
-		} catch (InterruptedException e) {
-			e.printStackTrace();
+//		} catch (InterruptedException e) {
+//			e.printStackTrace();
 		}
 	}
 
@@ -158,7 +168,7 @@ public class Cliente02 extends JFrame implements ActionListener, Runnable {
 		// Executa a leitura do input Stream 
 		// enquanto a thread não recebeu solicitação
 		// para ser interrompida
-		while(!thread.isInterrupted()) {
+		while(!isParar()) {
 	        try {
 	        	    // Lê o input Stream e grava no TextArea
 				textArea.append(in.readLine()+"\n");
@@ -167,7 +177,7 @@ public class Cliente02 extends JFrame implements ActionListener, Runnable {
 				// esteja presente na tela
 				textArea.setCaretPosition(textArea.getText().length());
 			} catch (IOException e) {
-				e.printStackTrace();
+//				e.printStackTrace();
 			}
 		}
 	}
