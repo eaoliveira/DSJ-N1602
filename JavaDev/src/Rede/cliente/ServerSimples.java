@@ -6,8 +6,8 @@ import java.net.*;
 public class ServerSimples  {
 	public static void main(String[] args) {
 		try {
+			ServerSocket srv = new ServerSocket(1234);
 			while (true) {
-				ServerSocket srv = new ServerSocket(1234);
 				Socket skt = srv.accept();
 
 				InputStreamReader is = new InputStreamReader(
