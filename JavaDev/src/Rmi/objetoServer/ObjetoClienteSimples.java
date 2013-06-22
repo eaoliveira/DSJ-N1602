@@ -13,7 +13,7 @@ public class ObjetoClienteSimples {
 		System.setSecurityManager(new RMISecurityManager());
 
 		ObjetoInterface rem = (ObjetoInterface) Naming
-				.lookup("rmi://10.190.39.250/nome");
+				.lookup("rmi://10.190.39.250/telaSwing");
 		
 		Teste obj = new Teste("Fulano de Tal", 35, "fufu@gmail.com");
 		
