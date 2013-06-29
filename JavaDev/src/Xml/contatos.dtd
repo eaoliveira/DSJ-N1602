@@ -1,0 +1,9 @@
+<!ELEMENT contatos (contato*)>
+<!ELEMENT contato (nome, telefone+, departamento, empresa)>
+<!ELEMENT nome (#PCDATA)>
+<!ELEMENT telefone EMPTY>
+<!ATTLIST telefone ddd NMTOKEN #IMPLIED>
+<!ATTLIST telefone numero NMTOKEN #REQUIRED>
+<!ATTLIST telefone ramal NMTOKEN #IMPLIED>
+<!ELEMENT departamento (#PCDATA)>
+<!ELEMENT empresa (#PCDATA)>
