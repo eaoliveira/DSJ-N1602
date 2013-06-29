@@ -4,6 +4,9 @@
 <cursos>
 	<curso>
 		<materia>java</materia>
+		<modulo>thread</modulo>
+		<modulo>socket</modulo>
+		<modulo>rmi</modulo>
 		<modulo>xml</modulo>
 	</curso>
 	<curso>
