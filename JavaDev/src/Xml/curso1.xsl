@@ -8,17 +8,17 @@
 </head><body>
 	<table border="1">
 		<xsl:for-each select="/cursos/curso">
-		<tr>
-		<td><xsl:value-of select="materia"/></td>
-		<td>
-		<table border="1">
-		<tr>
-		<xsl:for-each select="modulo">
-			<td><xsl:value-of select="." /></td>
-		</xsl:for-each>
-		</tr>
-		</table>
-		</td>
+		  <tr>
+		    <td><xsl:value-of select="materia"/></td>
+		    <td>
+		      <table border="1">
+		      <tr>
+		         <xsl:for-each select="modulo">
+			        <td><xsl:value-of select="." /></td>
+		         </xsl:for-each>
+		      </tr>
+		    </table>
+		   </td>
 		</tr>
 		</xsl:for-each>
 		</table>
