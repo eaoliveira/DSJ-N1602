@@ -1,4 +1,4 @@
-package api.jcalendar;
+package jcalendar;
 
 import java.awt.EventQueue;
 import java.awt.event.ActionEvent;
