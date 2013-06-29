@@ -1,0 +1,4 @@
+<!ELEMENT cursos (curso*) >
+<!ELEMENT curso (materia, modulo+) > 
+<!ELEMENT materia (#PCDATA) >
+<!ELEMENT modulo (#PCDATA) >
