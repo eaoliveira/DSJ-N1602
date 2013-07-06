@@ -1,0 +1,5 @@
+<!ELEMENT collection (nome*) >
+<!ELEMENT nome (id, idade, primeiroNome) >
+<!ELEMENT id (#PCDATA) >
+<!ELEMENT idade (#PCDATA) >
+<!ELEMENT primeiroNome (#PCDATA) >

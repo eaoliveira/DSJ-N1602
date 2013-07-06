@@ -1,0 +1,24 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script type="text/javascript" src="script.js"></script>
+<script type="text/javascript" src="jQuery1.7.2.js"></script>
+<title>Cadastro de Nomes</title>
+</head>
+<body onload="todos()">
+	<h3>Cadastro de Nomes</h3>
+	<hr>
+	<form name="form1">
+		Nome: <input type="text" size="10" name="nome">&nbsp; Idade: <input
+			type="text" size="5" name="idade"><br> <input
+			type="button" value="Salvar" onclick="salva()"> 
+	</form>
+	<div id="zone"></div>
+	<script type="text/javascript">
+		setInterval(function() {
+			todos();
+		}, 5000);
+	</script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE collection SYSTEM "nome.dtd">
+<collection>
+	<nome>
+		<id>0</id>
+		<idade>18</idade>
+		<primeiroNome>Fulano</primeiroNome>
+	</nome>
+	<nome>
+		<id>1</id>
+		<idade>23</idade>
+		<primeiroNome>Beltrano</primeiroNome>
+	</nome>
+</collection>
