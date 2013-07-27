@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<title>Cadastro de Funcionários</title>
+</head>
+<body>
+	<f:view id="view">
+		<h3>Cadastro de Funcionários</h3><hr/>
+		<h:form id="form"><h:panelGrid columns="3">
+		<h:outputText value="Nome" /><h:inputText value="#{cadastro.nome}" id="nome"/>
+                   <h:message for="nome"  warnClass="erro"/>
+		<h:outputText value="Matrícula"/> <h:inputText value="#{cadastro.matricula}" id="matricula"/>
+                   <h:message for="matricula"  warnClass="erro"/>
+		<h:outputText value="DDD"/> <h:inputText value="#{cadastro.ddd}" id="ddd"/>
+                   <h:message for="ddd"  warnClass="erro"/>
+		<h:outputText value="Telefone"/> <h:inputText value="#{cadastro.telefone}" id="telefone"/>
+                   <h:message for="telefone"  warnClass="erro"/>
+        </h:panelGrid>
+        <h:commandButton value="Salvar" action="#{cadastro.salvar }"/>&nbsp;&nbsp;
+        <h:commandButton value="Listar" action="listar.jsf"/>
+		</h:form><hr/>
+		Total de Funcionários: <h:outputText value="#{cadastro.quantos}"/><hr/>
+		<h:message id="msg" />
+	</f:view>
+</body>
+</html>
