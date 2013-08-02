@@ -20,11 +20,11 @@
 		<h:outputText value="Telefone"/> <h:inputText value="#{cadastro.telefone}" id="telefone"/>
                    <h:message for="telefone"  warnClass="erro"/>
         </h:panelGrid>
-        <h:commandButton value="Salvar" action="#{cadastro.salvar }"/>&nbsp;&nbsp;
+        <h:commandButton value="Salvar" action="#{cadastro.salvar }" />&nbsp;&nbsp;
         <h:commandButton value="Listar" action="listar.jsf"/>
 		</h:form><hr/>
 		Total de Funcionários: <h:outputText value="#{cadastro.quantos}"/><hr/>
-		<h:message id="msg" />
+		<h:message for="" id="msg" />
 	</f:view>
 </body>
 </html>
