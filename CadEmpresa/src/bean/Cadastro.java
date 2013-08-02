@@ -87,7 +87,7 @@ public class Cadastro {
 
 			dao.salvar(obj);
 
-			ctx.addMessage("msg", new FacesMessage("Funcion‡rio Cadastrado"));
+			ctx.addMessage("view:msg", new FacesMessage("Funcion‡rio Cadastrado"));
 			
 			nome = "";
 			matricula = "";
