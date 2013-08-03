@@ -5,11 +5,13 @@ import java.util.Collections;
 import java.util.List;
 
 import modelo.Contato;
+import modelo.Fone;
 
 
 public class GerenciaContatos {
 	private static GerenciaContatos instancia = null;
 	private static int id = 0;
+	private static int idFone = 0;
 	
 	private List<Contato> lista = null;
 	
@@ -34,6 +36,12 @@ public class GerenciaContatos {
 		}
 	}
 	
+	public void salvar(Fone obj) {
+		if(obj.getId() == null) { // inclui
+			obj.setId(idFone++);
+		} 
+	}
+	
 	public int size() {
 		return lista.size();
 	}
@@ -45,5 +53,18 @@ public class GerenciaContatos {
 	public void remove(int id) {
 		int indice = lista.indexOf(new Contato(id));
 		lista.remove(indice);
+	}
+	
+	public void remove(int contato, int id) {
+		int indice = lista.indexOf(new Contato(contato));
+		Contato obj = lista.get(indice);
+		
+		int indiceFone = lista.indexOf(new Fone(id));
+		obj.getFones().remove(indiceFone);
+	}
+	
+	public Contato localize(int id) {
+		int indice = lista.indexOf(new Contato(id));
+		return lista.get(indice);
 	}
 }

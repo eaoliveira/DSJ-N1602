@@ -16,7 +16,7 @@
 			<p>Idade <h:inputText value="#{entrada.idade}"/></p>
 			<p>E-Mail <h:inputText value="#{entrada.email}"/></p>
 			<h:commandButton value="Enviar"  action="#{entrada.enviar}"/>
-			<h:commandButton value="Listar Contatos" action="/lista.jsf"/>
+			<h:commandButton value="Listar Contatos" action="/lista.jsf" rendered="#{entrada.qtdCadastrado > 0}"/>
 		</h:form>
 		<hr/>
 		Total de registros cadastrados: <h:outputText value="#{entrada.qtdCadastrado}"/>

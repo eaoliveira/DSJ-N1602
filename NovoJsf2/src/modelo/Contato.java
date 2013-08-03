@@ -1,10 +1,14 @@
 package modelo;
 
-public class Contato {
+import java.util.ArrayList;
+import java.util.List;
+
+public class Contato implements Comparable<Contato>{
 	private Integer id;
 	private String nome;
 	private int idade;
 	private String email;
+	private List<Fone> fones = new ArrayList<Fone>();
 	
 	public Contato() {
 		super();
@@ -47,6 +51,14 @@ public class Contato {
 		this.email = email;
 	}
 
+	public List<Fone> getFones() {
+		return fones;
+	}
+
+	public void setFones(List<Fone> fones) {
+		this.fones = fones;
+	}
+
 	public String toString() {
 		return String.format("Nome: %s Idade: %d E-Mail: %s", nome, idade,
 				email);
@@ -77,6 +89,11 @@ public class Contato {
 		} else if (!id.equals(other.id))
 			return false;
 		return true;
+	}
+
+	@Override
+	public int compareTo(Contato outro) {
+		return nome.compareTo(outro.nome);
 	}
 
 

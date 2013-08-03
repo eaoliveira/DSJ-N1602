@@ -12,7 +12,8 @@
 	<f:view>
 	<h3>Contatos Cadastrados</h3>
 	<hr /><h:form>
-		<h:dataTable border="1" var="contato" value="#{listaBean.dados}">
+		<h:outputText  value="Não existem Contatos cadastrados"  rendered="#{entrada.qtdCadastrado == 0}"/>
+		<h:dataTable border="1" var="contato" value="#{listaBean.dados}" rendered="#{entrada.qtdCadastrado > 0}">
 			<h:column id="column1">
 				<f:facet name="header">Del</f:facet>
 					<h:selectBooleanCheckbox value="#{contato.del}"/>
@@ -29,8 +30,8 @@
 				<f:facet name="header">E-Mail</f:facet>
 				<h:outputText value="#{contato.email}"/>
 			</h:column>
-		</h:dataTable>
-		<h:commandButton value="Apagar os Itens Selecionados" action="#{listaBean.apagar}"/>&nbsp;&nbsp;
+		</h:dataTable><hr/>
+		<h:commandButton value="Apagar os Itens Selecionados" action="#{listaBean.apagar}" rendered="#{entrada.qtdCadastrado > 0}"/>&nbsp;&nbsp;
 		<h:commandButton value="Voltar" action="/inicio.jsf"/>
 		</h:form>
 	</f:view>
