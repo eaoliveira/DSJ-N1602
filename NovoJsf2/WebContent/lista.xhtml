@@ -6,7 +6,7 @@
 	xmlns:h="http://java.sun.com/jsf/html">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
-<title>Insert title here</title>
+<title>== Clube Nois ==</title>
 </head>
 <body>
 	<f:view>
@@ -31,7 +31,7 @@
 				<h:outputText value="#{contato.email}"/>
 			</h:column>
 		</h:dataTable><hr/>
-		<h:commandButton value="Apagar os Itens Selecionados" action="#{listaBean.apagar}" rendered="#{entrada.qtdCadastrado > 0}"/>&nbsp;&nbsp;
+		<h:commandButton value="Apagar os Itens Selecionados" action="#{listaBean.apagar}" rendered="#{entrada.qtdCadastrado > 0}"/>
 		<h:commandButton value="Voltar" action="/inicio.jsf"/>
 		</h:form>
 	</f:view>

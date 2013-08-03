@@ -6,7 +6,7 @@
 	xmlns:h="http://java.sun.com/jsf/html">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
-<title>Insert title here</title>
+<title>== Clube Nois ==</title>
 </head>
 <body>
 	<f:view>
@@ -17,6 +17,7 @@
 			<p>E-Mail <h:inputText value="#{entrada.email}"/></p>
 			<h:commandButton value="Enviar"  action="#{entrada.enviar}"/>
 			<h:commandButton value="Listar Contatos" action="/lista.jsf" rendered="#{entrada.qtdCadastrado > 0}"/>
+			<h:commandButton value="Voltar" action="/menu.jsf"/>
 		</h:form>
 		<hr/>
 		Total de registros cadastrados: <h:outputText value="#{entrada.qtdCadastrado}"/>

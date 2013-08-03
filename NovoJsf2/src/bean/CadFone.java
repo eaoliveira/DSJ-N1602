@@ -88,6 +88,7 @@ public class CadFone {
 	public void mudouContato(ValueChangeEvent ev) {
 		System.out.println("Valor Novo:" + ev.getNewValue() + " Valor Antigo:"
 				+ ev.getOldValue());
+		idContato = Integer.parseInt(ev.getNewValue().toString());
 	}
 
 }
