@@ -21,7 +21,7 @@
                    <h:message for="telefone"  warnClass="erro"/>
         </h:panelGrid>
         <h:commandButton value="Salvar" action="#{cadastro.salvar }" />&nbsp;&nbsp;
-        <h:commandButton value="Listar" action="listar.jsf"/>
+        <h:commandButton value="Listar" action="listar.jsf" rendered="#{cadastro.quantos > 0}"/>
 		</h:form><hr/>
 		Total de Funcionários: <h:outputText value="#{cadastro.quantos}"/><hr/>
 		<h:message for="" id="msg" />

@@ -12,7 +12,8 @@
 	<f:view>
 	<h3>Funcionários Cadastrados</h3>
 	<hr /><h:form>
-		<h:dataTable border="1" var="func" value="#{listaBean.dados}">
+		<h:outputText value="Não existem funcionários cadastrados" rendered="#{cadastro.quantos == 0}" />
+		<h:dataTable border="1" var="func" value="#{listaBean.dados}" rendered="#{cadastro.quantos > 0}">
 			<h:column id="column1">
 				<f:facet name="header">Del</f:facet>
 					<h:selectBooleanCheckbox value="#{func.del}"/>
@@ -25,8 +26,8 @@
 				<f:facet name="header">Matrícula</f:facet>
 				<h:outputText value="#{func.matricula}"/>
 			</h:column>
-		</h:dataTable>
-		<h:commandButton value="Apagar os Itens Selecionados" action="#{listaBean.apagar}"/>&nbsp;&nbsp;
+		</h:dataTable><hr/>
+		<h:commandButton value="Apagar os Itens Selecionados" action="#{listaBean.apagar}" rendered="#{cadastro.quantos > 0}" />&nbsp;&nbsp;
 		<h:commandButton value="Voltar" action="cadfunc.jsf"/>
 		</h:form>
 	</f:view>
