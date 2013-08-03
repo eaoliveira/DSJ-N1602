@@ -9,16 +9,19 @@ import javax.faces.bean.ManagedBean;
 import javax.faces.context.FacesContext;
 import javax.faces.model.ListDataModel;
 
+import modelo.Contato;
 import modelo.Fone;
 import dao.GerenciaContatos;
 
 @ManagedBean(name="listaFone")
 public class ListarFone {
+	private String nome;
+	private String email;
 	private ListDataModel<FoneModel> dados;
 	private Integer idContato;
 	
 	private GerenciaContatos dao = GerenciaContatos.getInstance();
-	
+
 	public ListarFone() {
 		FacesContext ctx = FacesContext.getCurrentInstance();
 		ELContext ex = ctx.getELContext();
@@ -26,6 +29,25 @@ public class ListarFone {
 				.createValueExpression(ex, "#{fone}", CadFone.class);
 		CadFone managedBean = (CadFone)ve.getValue(ex);
 		idContato = managedBean.getIdContato();
+		Contato obj = dao.localize(idContato);
+		nome = obj.getNome();
+		email = obj.getEmail();
+	}
+	
+	public String getNome() {
+		return nome;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
 	}
 	
 	public ListDataModel<FoneModel> getDados() {

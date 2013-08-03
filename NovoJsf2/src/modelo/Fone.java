@@ -39,6 +39,11 @@ public class Fone {
 	}
 
 	@Override
+	public String toString() {
+		return "id:  " + id + "  ddd:  " + ddd + "  numero:  " + numero;
+	}
+
+	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;

@@ -13,23 +13,25 @@ import modelo.Contato;
 import modelo.Fone;
 import dao.GerenciaContatos;
 
-@ManagedBean(name="fone")
+@ManagedBean(name = "fone")
 @SessionScoped
 public class CadFone {
 	private String ddd;
 	private String num;
 	private Integer idContato;
 	private List<SelectItem> contatos;
-	
+
 	private GerenciaContatos dao = GerenciaContatos.getInstance();
 
 	public CadFone() {
 		List<Contato> lista = dao.getContatos();
-		Collections.sort(lista);
-		Contato obj = lista.get(0);
-		idContato = obj.getId();
+		if (lista.size() > 0) {
+			Collections.sort(lista);
+			Contato obj = lista.get(0);
+			idContato = obj.getId();
+		}
 	}
-	
+
 	public String getDdd() {
 		return ddd;
 	}
@@ -56,11 +58,11 @@ public class CadFone {
 
 	public List<SelectItem> getContatos() {
 		contatos = new ArrayList<SelectItem>();
-		
+
 		for (Contato obj : dao.getContatos()) {
 			contatos.add(new SelectItem(obj.getId(), obj.getNome()));
 		}
-		
+
 		return contatos;
 	}
 
@@ -71,7 +73,7 @@ public class CadFone {
 	public int getQtdFones() {
 		return dao.localize(idContato).getFones().size();
 	}
-	
+
 	public String incluir() {
 		Contato obj = dao.localize(idContato);
 		Fone f = new Fone();
@@ -82,9 +84,10 @@ public class CadFone {
 		dao.salvar(f);
 		return "";
 	}
-	
+
 	public void mudouContato(ValueChangeEvent ev) {
-		System.out.println("Valor Novo:" + ev.getNewValue() + " Valor Antigo:" + ev.getOldValue());
+		System.out.println("Valor Novo:" + ev.getNewValue() + " Valor Antigo:"
+				+ ev.getOldValue());
 	}
 
 }

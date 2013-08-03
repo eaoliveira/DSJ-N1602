@@ -60,8 +60,12 @@ public class Contato implements Comparable<Contato>{
 	}
 
 	public String toString() {
-		return String.format("Nome: %s Idade: %d E-Mail: %s", nome, idade,
+		String msg = String.format("Nome: %s Idade: %d E-Mail: %s\nFones:\n", nome, idade,
 				email);
+		for (Fone obj : fones) {
+			msg += obj + "\n";
+		}
+		return msg;
 	}
 
 
