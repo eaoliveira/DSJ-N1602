@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<title>== Clube Nois ==</title>
+</head>
+<body>
+	<f:view>
+	<h3>Telefones Cadastrados</h3>
+	<hr /><h:form>
+		<h:outputText  value="Não existem Telefones cadastrados"  rendered="#{fone.qtdFones == 0}"/>
+		<h:panelGrid columns="2" rendered="#{fone.qtdFones > 0}">
+				Nome: <h:outputText value="#{listaFone.nome}"/>
+				E-Mail: <h:outputText value="#{listaFone.email}"/>
+		</h:panelGrid>
+		<h:dataTable border="1" var="item" value="#{listaFone.dados}" rendered="#{fone.qtdFones > 0}">
+			<h:column id="column1">
+				<f:facet name="header">Del</f:facet>
+					<h:selectBooleanCheckbox value="#{item.del}"/>
+				</h:column>
+			<h:column id="column2">
+				<f:facet name="header">DDD</f:facet>
+				<h:outputText value="#{item.ddd}"/>
+			</h:column>
+			<h:column id="column3">
+				<f:facet name="header">Nº</f:facet>
+				<h:outputText value="#{item.num}"/>
+			</h:column>
+		</h:dataTable><hr/>
+		<h:commandButton value="Apagar os Itens Selecionados" action="#{listaFone.apagar}" rendered="#{fone.qtdFones > 0}"/>
+		<h:commandButton value="Voltar" action="/cadFone.jsf"/>
+		</h:form>
+	</f:view>
+</body>
+</html>
