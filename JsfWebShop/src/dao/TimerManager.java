@@ -52,7 +52,7 @@ public class TimerManager {
 	public synchronized void ejbTimeout(Timer timer) {
 		System.out.println("Timer tick:" + new Date());
 		for (String id : beans.keySet()) {
-			System.out.println("Carrinho expirado: " + id);
+			System.out.println("Avisando Carrinho: " + id);
 			beans.get(id).avisa(timer, id);
 		}
 	}
