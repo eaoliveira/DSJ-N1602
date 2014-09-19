@@ -1,9 +1,0 @@
-<!ELEMENT produtos (pizza*) >
-<!ELEMENT pizza (id, nome, grupo, descricao, imagemGrande, imagemPequena, preco) >
-<!ELEMENT id (#PCDATA) >
-<!ELEMENT nome (#PCDATA) >
-<!ELEMENT grupo (#PCDATA) >
-<!ELEMENT descricao (#PCDATA) >
-<!ELEMENT imagemGrande (#PCDATA) >
-<!ELEMENT imagemPequena (#PCDATA) >
-<!ELEMENT preco (#PCDATA) >

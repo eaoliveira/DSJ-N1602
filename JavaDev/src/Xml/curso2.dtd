@@ -1,4 +1,0 @@
-<!ELEMENT cursos (curso*) >
-<!ELEMENT curso EMPTY > 
-<!ATTLIST curso materia CDATA #REQUIRED
-						  modulo CDATA #REQUIRED >
