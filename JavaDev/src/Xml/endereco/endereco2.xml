@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE endereco [
+<!ELEMENT endereco EMPTY >
+<!ATTLIST endereco logradouro CDATA  #REQUIRED >
+<!ATTLIST endereco numero CDATA  #REQUIRED >
+<!ATTLIST endereco complemento CDATA #IMPLIED >
+<!ATTLIST endereco bairro CDATA  #REQUIRED >
+<!ATTLIST endereco cep CDATA #IMPLIED >
+<!ATTLIST endereco cidade CDATA #IMPLIED >
+<!ATTLIST endereco estado CDATA  #IMPLIED > ]>
+<endereco
+  logradouro="Rua Bela Vista" 
+  numero="32"
+  complemento="frente"
+  bairro="Centro"
+  cep="02932-032"
+  cidade="São Paulo"
+  estado="SP" />

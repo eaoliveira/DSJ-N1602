@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE endereco [
+<!ELEMENT endereco (logradouro, numero, complemento?, 
+                    bairro, cep?, cidade?, estado?) >
+<!ELEMENT logradouro (#PCDATA) >
+<!ELEMENT numero (#PCDATA) >
+<!ELEMENT complemento (#PCDATA) >
+<!ELEMENT bairro (#PCDATA) >
+<!ELEMENT cep (#PCDATA) >
+<!ELEMENT cidade (#PCDATA) >
+<!ELEMENT estado (#PCDATA) > ]>
+<endereco>
+  <logradouro>Rua Bela Vista</logradouro>
+  <numero>32</numero>
+  <complemento>frente</complemento>
+  <bairro>Centro</bairro>
+  <cep>02932-032</cep>
+  <cidade>São Paulo</cidade>
+  <estado>SP</estado>
+</endereco>
