@@ -3,6 +3,7 @@ package Xml.hobby;
 // https://jaxb.dev.java.net
 // JAXB - Java-to-XML
 
+import java.awt.Desktop;
 import java.io.*;
 import java.net.URISyntaxException;
 
@@ -36,16 +37,21 @@ public class JavaToXmlBindExample {
         Marshaller m = ctx.createMarshaller();
         m.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
         
- //       FileOutputStream fo = new FileOutputStream("/Volumes/Area/Media/pena/Desktop/xmlSaida.xml");
-        
-        m.marshal(pessoas, System.out);
+        File temp = File.createTempFile("Hobby", ".xml");
+        m.marshal(pessoas, new FileOutputStream(temp));
+        if(Desktop.isDesktopSupported())
+    	  	Desktop.getDesktop().open(temp);
+      else 
+    	    System.out.println("O arquivo " + temp.getName() + " não pode ser aberto no Editor de Texto");
      } catch (JAXBException ex) {
         System.out.println("JAXB Binding Exception");
         ex.printStackTrace();
      } catch (URISyntaxException e) {
 		e.printStackTrace();
-//	} catch (FileNotFoundException e) {
-//		e.printStackTrace();
+	} catch (FileNotFoundException e) {
+		e.printStackTrace();
+	} catch (IOException e) {
+		e.printStackTrace();
 	}
   }
 }
