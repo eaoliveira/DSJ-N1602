@@ -1,0 +1,5 @@
+<!ELEMENT filmes (filme+) >
+<!ELEMENT filme (titulo, idade) >
+<!ATTLIST filme estilo ( terror | infantil | comédia | ação | drama | suspense ) #REQUIRED >
+<!ELEMENT titulo (#PCDATA) >
+<!ELEMENT idade (#PCDATA) >
