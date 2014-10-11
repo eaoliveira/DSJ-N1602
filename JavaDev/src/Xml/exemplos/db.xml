@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE db SYSTEM "db.dtd">
+<!-- DOCTYPE db PUBLIC "DB XML" "http://localhost:8080/db.dtd" -->
+<!-- DOCTYPE db [ 
+<!ELEMENT db ( connection+ ) >
+<!ELEMENT connection ( url, driver, userid*, passwd*, codebase*, policy*, objname ) >
+<!ATTLIST connection name NMTOKEN #REQUIRED >
+<!ELEMENT url ( #PCDATA ) >
+<!ELEMENT driver ( #PCDATA ) >
+<!ELEMENT userid ( #PCDATA ) >
+<!ELEMENT passwd ( #PCDATA ) >
+<!ELEMENT codebase ( #PCDATA ) >
+<!ELEMENT policy ( #PCDATA ) >
+<!ELEMENT objname ( #PCDATA ) > ] -->
+<db>
+ <connection name="dbLocal">
+  <url>jdbc:mysql://localhost/agenda</url>
+  <driver>com.mysql.jdbc.Driver</driver>
+  <userid>root</userid>
+  <objname>LOCAL</objname>
+ </connection>
+ <connection name="db">
+  <url>jdbc:mysql://localhost/test</url>
+  <driver>com.mysql.jdbc.Driver</driver>
+  <userid>root</userid>
+  <policy>java.policy</policy>
+  <objname>//localhost/ConnDbRemote</objname>
+ </connection>
+ <connection name="dbOdbc">
+  <url>jdbc:odbc:hlinodbc;UID=root</url>
+  <driver>sun.jdbc.odbc.JdbcOdbcDriver</driver>
+  <policy>java.policy</policy>
+  <objname>//localhost/ConnDbRemote</objname>
+ </connection>
+</db>
