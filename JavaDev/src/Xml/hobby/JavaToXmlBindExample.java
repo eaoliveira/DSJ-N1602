@@ -9,9 +9,6 @@ import java.net.URISyntaxException;
 
 import javax.xml.bind.*;
 
-import Xml.pessoa.Pessoa;
-import Xml.pessoa.Pessoas;
-
 public class JavaToXmlBindExample {
    public static void main(String[] args) {
      try {
