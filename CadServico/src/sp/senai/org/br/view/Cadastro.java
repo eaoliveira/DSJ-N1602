@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import sp.senai.org.br.model.Servico;
 
-@WebServlet
+@WebServlet("/Cadastro")
 public class Cadastro extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
