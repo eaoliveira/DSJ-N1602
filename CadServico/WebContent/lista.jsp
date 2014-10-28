@@ -4,8 +4,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>Cadastro Efetuado</title>
+	<meta charset="UTF-8">
+	<title>Cadastro Efetuado</title>
+	<link rel="stylesheet" type="text/css" href="style/paginas.css">
 </head>
 <body>
 	<h2>Sucesso no Cadastro do serviço abaixo</h2>
