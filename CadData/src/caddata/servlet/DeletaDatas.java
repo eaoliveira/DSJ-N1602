@@ -20,8 +20,9 @@ public class DeletaDatas extends HttpServlet {
 		
 			GerenteDeDados dao = GerenteDeDados.getInstance();
 
-			for (String id : ids)
-				dao.apagaData(Integer.parseInt(id));
+			if(ids != null)
+				for (String id : ids)
+					dao.apagaData(Integer.parseInt(id));
 			
 			response.sendRedirect("mostraDatas.jsp");
 	}
