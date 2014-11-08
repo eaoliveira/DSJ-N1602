@@ -13,12 +13,6 @@ public class DataBean {
 	}
 
 	public List<ObjData> getData() {
-		
-		System.out.println("--- Lista de Datas Cadastradas ---");
-		for (ObjData objData : data) {
-			System.out.println("getData: " + objData);
-		}
-
 		return data;
 	}
 
@@ -27,7 +21,6 @@ public class DataBean {
 	}
 	
 	public int getQuantidade() {
-		System.out.println("GetQuantidade: " + data.size());
 		return data.size();
 	}
 }
