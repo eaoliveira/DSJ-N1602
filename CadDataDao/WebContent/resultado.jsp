@@ -2,7 +2,7 @@
 	pageEncoding="UTF-8" import="caddata.bean.Mensagem"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
-<html>
+<html manifest="resources/cache.manifest">
 <head>
 	<meta charset="UTF-8">
 	<title>Cadastro de Datas</title>

@@ -25,7 +25,7 @@ public class DeletaDatas extends HttpServlet {
 				for (String id : ids)
 					dao.apagaData(Integer.parseInt(id));
 			
-			response.sendRedirect("mostraDatas.jsp");
+			response.sendRedirect("CarregaDatas");
 	}
 
 	protected void doPost(HttpServletRequest request,

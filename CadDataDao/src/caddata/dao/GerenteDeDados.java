@@ -31,7 +31,6 @@ public class GerenteDeDados {
 	
 	public void apagaData(int id) {
 		ObjData obj = em.find(ObjData.class, id);
-		System.out.println("Apagar: " + obj);
 		em.remove(obj);
 	}
 }
