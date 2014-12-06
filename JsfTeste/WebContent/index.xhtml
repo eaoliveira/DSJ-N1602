@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<title>Bem Vindo</title>
+</head>
+<body>
+	<f:view>
+		<h:form>
+			<h2>Bem Vindo</h2>
+			<hr/>
+			<p>Informe:</p>
+			<p>
+				Nome
+				<h:inputText size="20" value="#{bean.nome}" /></p>
+			<p>
+				Idade
+				<h:inputText size="3" value="#{bean.idade}" /></p>
+			<p>
+				<h:commandButton value="Enviar" action="#{bean.enviar}" /></p>
+			<hr/>
+			<p>
+				<h:messages /></p>
+			<hr/>
+			<h:dataTable border="1" value="#{bean.dados}" var="sujeito"
+				rendered="#{bean.quantidade > 0}">
+				<h:column>
+					<f:facet name="header"><h:outputText value="Nome" /></f:facet>
+					<h:outputText value="#{sujeito.nome}" />
+				</h:column>
+				<h:column>
+					<f:facet name="header"><h:outputText value="Idade" /></f:facet>
+					<h:outputText value="#{sujeito.idade}" />
+				</h:column>
+				<h:column>
+					<f:facet name="header"><h:outputText value="Del" /></f:facet>
+					<h:selectBooleanCheckbox value="#{sujeito.del}"  onclick="submit()" />					
+				</h:column>
+			</h:dataTable>
+			<p><h:commandButton value="Remover itens marcados" action="#{bean.del}"  rendered="#{bean.quantidade > 0}"/></p>
+		</h:form>
+	</f:view>
+</body>
+</html>
