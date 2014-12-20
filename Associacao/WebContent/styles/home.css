@@ -1,0 +1,92 @@
+  h1 {
+	color: blue;
+	font-size: 20pt;
+	font-weight: bold;
+  }
+  .titulo {
+    background: #4d8cba;
+    color: #fff;
+	font-size: 12pt;
+	font-weight: bold;
+	text-align: center;
+  }
+  .titulo1 {
+	font-size: 12pt;
+	font-weight: bold;
+	text-align: center;
+    color: black;
+    text-decoration: none; 
+  }
+  a.titulo1 {
+    text-decoration: none; 
+  }
+  .erro {
+    background: #ff0000;
+    color: #fff;
+	font-size: 12pt;
+	font-weight: bold;
+	text-align: center;
+  }
+ .centro {
+    border-width: thin;
+  }
+  img.float {
+    float: left;
+	padding-top: 5px; 
+	padding-right: 5px; 
+  }
+  img.floatr {
+    float: right;
+	padding-top: 5px; 
+	padding-left: 5px; 
+  }
+  img.floatc {
+    float: none;
+	padding-top: 5px; 
+	padding-right: 5px; 
+	padding-left: 5px; 
+  }
+body 	{ 
+	font-family: Verdana,Arial,Helvetica, sans-serif; 
+	margin-top: 20px;
+	background-color: #ffa800; 
+	padding-right: 20px; 
+	padding-left: 1pt; 
+  } 
+  .pequeno 
+	{ 
+	font-family: Lucida,LuciduxSans,Helvetica,sans-serif; 
+	font-size: 11px; 
+	padding-top: 1px; 
+	padding-left: 1pt; 
+	}
+  .coluna 
+	{ 
+	background-color: #ffa800;
+	color: black;
+	font-weight: normal;
+	font-family: Verdana,Arial,Helvetica, sans-serif; 
+	font-size: 14px; 
+	text-align: justify;
+	padding: 10px;
+	}
+  .pq_negrito
+	{ 
+	font-family: Verdana,Arial,Helvetica, sans-serif; 
+	text-decoration: bold;
+	text-align: justify;
+	font-size: 13px; 
+	padding-top: 1px; 
+	padding-left: 1pt; 
+	}
+ .links 
+	{ 
+	background-color: #ffa800; 
+    color: black;
+ 	font-weight: normal;
+	font-family: Verdana,Arial,Helvetica, sans-serif; 
+	font-size: 14px; 
+	text-align: center;
+	padding: 10px; 
+	}
+	
