@@ -1,0 +1,104 @@
+body {
+	font: 18px Arial;
+	margin: 10px;
+	background-color: #EEEEEE;
+}
+
+h1 {
+	margin: 10x;
+	padding: 12px 0;
+	color: #000000;
+	font: bold 40px Arial;
+	text-align: center;
+}
+
+h2 {
+	font: bold 24px Arial;
+	color: #595959;
+}
+
+h3 {
+	font: bold 18px Arial;
+	color: #5959f9;
+}
+
+p {
+	color: #3a34c3;
+	margin: 20px;
+	text-decoration: none;
+}
+
+b {
+	color: #3a34c3;
+	text-decoration: none;
+}
+
+a {
+	color: #3a34c3;
+	text-decoration: none;
+	text-shadow:5px 5px #cfcfcf;
+}
+
+a:hover {
+	text-decoration: underline;
+	text-shadow:5px 5px 10px blue;
+}
+
+.coluna1 {
+	background-color: #DAE2DB;
+}
+
+.coluna2 {
+	background-color: #B8E2AF;
+}
+
+.headertabela {
+	background-color: #c2c6e2;
+}
+
+table {
+	color: #3a34c3;
+	margin: 20px;
+	text-decoration: none;
+}
+
+.mensagens {
+	color: #FF1A15;
+}
+
+#header {
+	background-image:
+		url("/TurmaJSF/resources/imagens/banner1.jpg");
+	background-repeat: repeat-x;
+	padding: 0px 0px 0px 0px;
+	width: 100%
+}
+
+#conteudo {
+	width: 100%;
+	margin: 0px 0px 10px 10px;
+	text-align: left;
+	height: 100%;
+	font-size: 14px;
+}
+
+#titulo h1 {
+	line-height: 45px;
+	color: #ffffff;
+}
+
+#footer {
+	position: absolute;
+	margin-left: 0px;
+	margin-right: 10px;
+	bottom: 0px;
+	width: 98%;
+	height: 60px;
+	text-align: center;
+}
+
+#footer h4 {
+	color: #000069;
+	font-size: 12px;
+	margin-top: 0px;
+}
