@@ -1,0 +1,52 @@
+<!DOCTYPE  html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:a4j="http://richfaces.org/a4j"
+	xmlns:rich="http://richfaces.org/rich">
+<f:view>
+	<h:head>
+		<title>Cadastro de Nomes</title>
+		<meta http-equiv="pragma" content="no-cache" />
+		<meta name="expires" content="tue, 01 Jun 2010" />
+	</h:head>
+	<h:body>
+		<h:outputStylesheet name="css/style.css"/>
+		<div id="geral" style="width: 100%;">
+			<div id="header" style="width: 100%;">
+				<h:graphicImage name="images/banner.png" style="float:left;" />
+				<div id="titulo">
+					<ui:insert name="titulo">
+						<h1>Cadastro de Nomes</h1>
+					</ui:insert>
+				</div>
+				<div style="clear: both"></div>
+			</div>
+
+			<div id="menu">
+				<h:form>
+					<rich:toolbar style="width: 100%;">
+						<rich:dropDownMenu label="Cadastros">
+							<rich:menuItem label="Nome" action="cadastro.xhtml" />
+							<rich:menuSeparator />
+							<rich:menuItem label="Tela Principal" action="index.xhtml" />
+						</rich:dropDownMenu>
+					</rich:toolbar>
+				</h:form>
+			</div>
+
+			<div id="conteudo" align="center">
+				<ui:insert name="conteudo">Espaco para o conteudo da pagina</ui:insert>
+			</div>
+
+			<div id="footer" style="text-align: center">
+				<hr width="100%" size="2" noshade="noshade" />
+				<h4>&copy;2014 &Eacute; N&oacute;is Centro de Inform&aacute;tica.</h4 >
+			</div>
+
+		</div>
+	</h:body>
+</f:view>
+</html>
