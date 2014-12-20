@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:a4j="http://richfaces.org/a4j"
+	xmlns:rich="http://richfaces.org/rich">
+<f:view>
+	<h:head>
+		<title>Escola 1/2 Boca</title>
+	</h:head>
+	<h:body>
+		<h:outputStylesheet name="css/paginas.css" />
+		<div id="geral" style="width: 100%;">
+			<div id="header">
+				<h:graphicImage name="imagens/banner.png" style="float:left;" />
+				<div id="titulo">
+					<ui:insert name="titulo">
+						<h1>Escola 1/2 Boca</h1>
+					</ui:insert>
+				</div>
+				<div style="clear: both"></div>
+			</div>
+
+			<div id="menu">
+				<h:form>
+					<rich:toolbar style="width: 100%;">
+						<rich:dropDownMenu label="Turmas">
+							<rich:menuItem label="Incluir" action="cadturma.xhtml" />
+							<rich:menuItem label="Listar" action="listaturma.xhtml" />
+						</rich:dropDownMenu>
+						<rich:dropDownMenu label="Alunos">
+							<rich:menuItem label="Matricula" action="cadaluno.xhtml" />
+						</rich:dropDownMenu>
+						<rich:menuItem label="Tela Principal" action="index.xhtml" />
+					</rich:toolbar>
+				</h:form>
+			</div>
+
+			<div id="conteudo">
+				<h:message for="form" class="mensagens"/>
+				<h:form id="form">
+					<ui:insert name="conteudo">Espaco para o conteudo da pagina</ui:insert>
+				</h:form>
+			</div>
+
+			<div id="footer">
+				<hr />
+				<h4>&#174;2014 É Nóis Centro de Informática.</h4>
+			</div>
+		</div>
+	</h:body>
+</f:view>
+</html>
