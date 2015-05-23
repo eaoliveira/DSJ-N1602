@@ -1,4 +1,4 @@
-package Thread.ball.resposta1;
+package Thread.ball.resposta.ex1;
 
 import java.awt.Color;
 import java.awt.Dimension;

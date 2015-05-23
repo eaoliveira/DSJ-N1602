@@ -1,5 +1,6 @@
-package Thread.ball.resposta1;
+package Thread.ball.resposta.ex1;
 
+import java.awt.Color;
 import java.awt.Container;
 import java.awt.Dimension;
 
@@ -52,6 +53,10 @@ class Bounce extends JFrame {
 
 		public SimpleBall(JPanel painel) {
 			super(painel);
+		}
+
+		public SimpleBall(JPanel b, Color c) {
+			super(b, c);
 		}
 
 		public void run() {
