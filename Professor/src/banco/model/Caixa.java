@@ -43,6 +43,7 @@ public class Caixa extends Thread {
 				Thread.sleep(docs * 1000);
 			}
 		} catch (InterruptedException ex) {
+			System.err.println("Caixa Fechado");
 		}
 	}
 }

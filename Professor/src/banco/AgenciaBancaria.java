@@ -1,30 +1,25 @@
 package banco;
 
+import java.awt.Color;
 import java.awt.EventQueue;
+import java.awt.Font;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
-import javax.swing.JFrame;
-import javax.swing.JPanel;
-import javax.swing.border.EmptyBorder;
 import javax.swing.GroupLayout;
 import javax.swing.GroupLayout.Alignment;
-import javax.swing.JLabel;
-
-import java.awt.Font;
-
-import javax.swing.LayoutStyle.ComponentPlacement;
-import javax.swing.JTextField;
-
-import java.awt.Color;
-
-import javax.swing.JSpinner;
 import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JSpinner;
+import javax.swing.JTextField;
+import javax.swing.LayoutStyle.ComponentPlacement;
 import javax.swing.SpinnerNumberModel;
+import javax.swing.border.EmptyBorder;
 
 import banco.model.Agencia;
 import banco.model.Caixa;
-
-import java.awt.event.ActionListener;
-import java.awt.event.ActionEvent;
 
 @SuppressWarnings("serial")
 public class AgenciaBancaria extends JFrame implements ActionListener, Runnable {
@@ -43,7 +38,7 @@ public class AgenciaBancaria extends JFrame implements ActionListener, Runnable 
 	private JButton btnAbreAAgncia;
 	private JButton btnFechaAAgncia;
 	
-	private Agencia ag = new Agencia();
+	private Agencia ag;
 	private Thread thread;
 
 	public static void main(String[] args) {
@@ -63,7 +58,7 @@ public class AgenciaBancaria extends JFrame implements ActionListener, Runnable 
 		setResizable(false);
 		setTitle("Ag\u00EAncia Banc\u00E1ria");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 450, 300);
+		setBounds(100, 100, 489, 300);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
@@ -86,6 +81,7 @@ public class AgenciaBancaria extends JFrame implements ActionListener, Runnable 
 		spinner.setModel(new SpinnerNumberModel(10, 0, 10, 1));
 		
 		btnSalvar = new JButton("Salvar");
+		btnSalvar.setEnabled(false);
 		btnSalvar.addActionListener(this);
 		
 		tfFileNorm = new JTextField();
@@ -124,6 +120,7 @@ public class AgenciaBancaria extends JFrame implements ActionListener, Runnable 
 		btnAbreAAgncia.addActionListener(this);
 		
 		btnFechaAAgncia = new JButton("Fecha a Ag\u00EAncia");
+		btnFechaAAgncia.setEnabled(false);
 		btnFechaAAgncia.addActionListener(this);
 		
 		GroupLayout gl_contentPane = new GroupLayout(contentPane);
@@ -142,9 +139,9 @@ public class AgenciaBancaria extends JFrame implements ActionListener, Runnable 
 				.addGroup(gl_contentPane.createSequentialGroup()
 					.addGap(24)
 					.addComponent(tfFilaPref, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-					.addGap(24)
-					.addComponent(spinner, GroupLayout.PREFERRED_SIZE, 37, GroupLayout.PREFERRED_SIZE)
-					.addGap(12)
+					.addGap(18)
+					.addComponent(spinner, GroupLayout.PREFERRED_SIZE, 49, GroupLayout.PREFERRED_SIZE)
+					.addPreferredGap(ComponentPlacement.RELATED)
 					.addComponent(btnSalvar)
 					.addGap(21)
 					.addComponent(tfFileNorm, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
@@ -165,7 +162,7 @@ public class AgenciaBancaria extends JFrame implements ActionListener, Runnable 
 				.addGroup(gl_contentPane.createSequentialGroup()
 					.addContainerGap()
 					.addComponent(btnAbreAAgncia)
-					.addPreferredGap(ComponentPlacement.RELATED, 204, Short.MAX_VALUE)
+					.addPreferredGap(ComponentPlacement.RELATED, 178, Short.MAX_VALUE)
 					.addComponent(btnFechaAAgncia))
 		);
 		gl_contentPane.setVerticalGroup(
@@ -178,18 +175,20 @@ public class AgenciaBancaria extends JFrame implements ActionListener, Runnable 
 						.addComponent(lblFilaPreferencial)
 						.addComponent(lblNewLabel_1)
 						.addComponent(lblFilaNormal))
-					.addGap(6)
 					.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
 						.addGroup(gl_contentPane.createSequentialGroup()
-							.addGap(3)
-							.addComponent(tfFilaPref, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+							.addGap(6)
+							.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
+								.addGroup(gl_contentPane.createSequentialGroup()
+									.addGap(3)
+									.addComponent(tfFilaPref, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+								.addComponent(btnSalvar)
+								.addGroup(gl_contentPane.createSequentialGroup()
+									.addGap(3)
+									.addComponent(tfFileNorm, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))))
 						.addGroup(gl_contentPane.createSequentialGroup()
-							.addGap(3)
-							.addComponent(spinner, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
-						.addComponent(btnSalvar)
-						.addGroup(gl_contentPane.createSequentialGroup()
-							.addGap(3)
-							.addComponent(tfFileNorm, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)))
+							.addGap(9)
+							.addComponent(spinner, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)))
 					.addGap(24)
 					.addComponent(lblCaixas)
 					.addGap(12)
@@ -199,7 +198,7 @@ public class AgenciaBancaria extends JFrame implements ActionListener, Runnable 
 						.addComponent(tfCx3, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
 						.addComponent(tfCx4, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
 						.addComponent(tfCx5, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
-					.addPreferredGap(ComponentPlacement.RELATED, 43, Short.MAX_VALUE)
+					.addPreferredGap(ComponentPlacement.RELATED, 34, Short.MAX_VALUE)
 					.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE)
 						.addComponent(btnAbreAAgncia)
 						.addComponent(btnFechaAAgncia)))
@@ -214,12 +213,30 @@ public class AgenciaBancaria extends JFrame implements ActionListener, Runnable 
 			Number num = (Number)spinner.getValue();
 			ag.setQtdClientes(num.intValue());
 		} else if(botao.equals(btnAbreAAgncia)) {
+			ag = new Agencia();
 			ag.abrir();
 			thread = new Thread(this);
 			thread.start();
+			// garante que as ações na interface somente estarão disponíveis
+			// no momento adequado
+			btnFechaAAgncia.setEnabled(true);
+			btnAbreAAgncia.setEnabled(false);
+			btnSalvar.setEnabled(true);
 		} else {
-			thread.interrupt();
-			ag.fechar();
+			// aguarda o fechamento dos caixas para a finalização da
+			// monitoração do nº de clientes nas filas e tipo de atendimento
+			new Thread(() -> {
+				try {
+					ag.fechar().join();
+					thread.interrupt();
+					// garante que as ações na interface somente estarão disponíveis
+					// no momento adequado
+					btnFechaAAgncia.setEnabled(false);
+					btnAbreAAgncia.setEnabled(true);
+					btnSalvar.setEnabled(false);
+				} catch(InterruptedException ex) {
+				}
+			}).start();
 		}
 	}
 	
@@ -234,9 +251,10 @@ public class AgenciaBancaria extends JFrame implements ActionListener, Runnable 
 					tx[i].setText(String.valueOf(cx[i].getAtendimento()));
 				}
 				
-				Thread.sleep(5000);
+				Thread.sleep(2000);
 			}
 		} catch(InterruptedException ex) {
+			System.err.println("Agência Fechada");
 		}
 	}
 }
