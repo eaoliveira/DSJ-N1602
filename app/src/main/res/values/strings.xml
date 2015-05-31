@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Unipharmus</string>
+
+    <!-- MENU NAVIGATION -->
+    <string name="nav_home">Home</string>
+    <string name="nav_orcamento">Orçamento</string>
+    <string name="nav_entrega">Entrega de produto</string>
+    <string name="nav_quem">Quem somos</string>
+    <string name="nav_contato">Contato</string>
+    <string name="nav_redes">Redes sociais</string>
+
+    <!-- TELA ORÇAMENTO -->
+    <string name="ohintnome">Digite o nome</string>
+    <string name="ohintnasc">Digite a data de nascimento</string>
+    <string name="ohinttelres">Digite o telefone residencial</string>
+    <string name="ohintcel">Digite o celular</string>
+    <string name="ohintend">Digite o endereço</string>
+    <string name="ohintcidade">Digite a cidade</string>
+    <string name="ohintemail">Digite o email</string>
+    <string name="ohintmsg">Digite uma mensagem</string>
+
+
+    <!-- NOSSA HISTORIA -->
+    <string name="nossahistoria">Nossa história</string>
+
+    <!-- MENU LATERAL DIREITO -->
+    <string name="op_opcoes">Opções</string>
+    <string name="op_relatar">Relatar problemas</string>
+    <string name="op_sobre">Sobre</string>
+    <string name="op_logoff">Logoff</string>
+    <string name="op_sair">Sair</string>
+
+    <!-- TELA LOGIN -->
+    <string name="usuario">Digite seu usuário: </string>
+    <string name="senha">Digite sua senha: </string>
+    <string name="entrar">Entrar</string>
+    <string name="sair">Sair</string>
+
+    <!-- TELA CONTATO -->
+    <string name="hintnome">Digite o nome</string>
+    <string name="hintemail">Digite o email</string>
+    <string name="hintassunto">Digite o assunto</string>
+    <string name="hintmensagem">Digite sua mensagem</string>
+    <string name="titulocontato">Contato</string>
+    <string name="btenviarm">Enviar mensagem</string>
+    <string name="preencha">Preencha os dados do formulário, e envie sua mensagem.</string>
+
+    <!-- TELA HOME -->
+    <string name="txtopcoes">Acesse aqui o menu de opções</string>
+
+    <!-- TELA SOBRE -->
+    <string name="versao_app">Versão do aplicativo: 1.1</string>
+    <string name="empresa">Empresa: µAdaphty.</string>
+    <string name="sede">Sede: Osasco, - SP, Brasil</string>
+    <string name="telefone">Telefone: (11)3688-3455</string>
+    <string name="endereco">Endereço: Av. autonomistas, 758</string>
+
+    <!-- TELA QUEM SOMOS -->
+    <string name="textoquemsomos">Fundada em 1989 em São Paulo, a Unipharmus se tornou referência nacional por ser 
+        considerada uma das maiores empresas do setor magistral. </string>
+    <string name="texto">Contamos hoje com uma rede de 9 farmácias de 
+        manipulação (Vila Mariana, Guaianazes, Tatuapé, Lapa, Osasco, Santo Amaro, Higienópolis, Moema e Santana) para 
+        atendimento na grande São Paulo, dotadas de laboratórios farmacêuticos com o mais alto nível de qualidade e tecnologia.
+        Seguimos o mesmo padrão de atendimento e qualidade em toda a rede de farmácias e os mais rigorosos 
+        critérios na fabricação de medicamentos manipulados e fórmulas magistrais, agregando técnicas modernas de 
+        produção e controle de qualidade farmacêutica com a tradição inerente à atividade magistral, onde o 
+        monitoramento pelo farmacêutico é permanente e imprescindível em todas as etapas do processo farmacotécnico. </string>
+    <string name="titulopesquisa">Pesquisa e desenvolvimento</string>
+    <string name="textopesquisa">A Unipharmus Farmácia de Manipulação possui um serviço exclusivo de PESQUISA e 
+	    DESENVOLVIMENTO direcionado unicamente a classe médica e demais prescritores.Nosso principal objetivo é 
+	    auxiliar a escolha, prescrição e adesão ao tratamento proposto aos pacientes.Para isso, contamos com uma equipe 
+	    de profissionais farmacêuticos altamente qualificados, onde disponibilizamos atendimento personalizado via 
+	    e-mail ou visita pessoal agendada em seu consultório.</string>
+
+    <!-- TELA RELATAR -->
+    <string name="oqueha">O que está acontecendo com o app?</string>
+    <string name="btenviar">Enviar relatório</string>
+
+    <!-- CONFIG NAVIGATION DRAWER -->
+    <string name="navigation_drawer_open">Abrir o navegador</string>
+    <string name="navigation_drawer_close">Fechar o navegador></string>
+
+</resources>

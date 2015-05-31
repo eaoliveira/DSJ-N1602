@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="/Area/Cursos/Android/Projetos/AndroidStudioProjects/Unipharmus/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.1.1/jars/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="a3ff3c506644c820eb2bdf06e8339f72be578551">
+        <dex dex="/Area/Cursos/Android/Projetos/AndroidStudioProjects/Unipharmus/app/build/intermediates/pre-dexed/debug/classes-10bccb51054accd54bda723768bd7730e576f5fa.jar" />
+    </item>
+    <item
+        jar="/Area/Cursos/Android/Binarios/AndroidStudio/sdk/extras/android/m2repository/com/android/support/support-annotations/22.1.1/support-annotations-22.1.1.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="01d051a6bfb1218b1db2d3a5af0480ac2c25c42a">
+        <dex dex="/Area/Cursos/Android/Projetos/AndroidStudioProjects/Unipharmus/app/build/intermediates/pre-dexed/debug/support-annotations-22.1.1-6c44d407af1c4ebf214f26dae82068a4da335dc9.jar" />
+    </item>
+    <item
+        jar="/Area/Cursos/Android/Projetos/AndroidStudioProjects/Unipharmus/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.1.1/jars/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="c95ba8152923e4872e86a82cfcba9a51c0214328">
+        <dex dex="/Area/Cursos/Android/Projetos/AndroidStudioProjects/Unipharmus/app/build/intermediates/pre-dexed/debug/classes-bb2943facb4fc68bec6b3fe44809d354d44346ac.jar" />
+    </item>
+    <item
+        jar="/Area/Cursos/Android/Projetos/AndroidStudioProjects/Unipharmus/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.1.1/jars/libs/internal_impl-22.1.1.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="9e070ad32b2700b0343e8e0cccc437733d91ba3a">
+        <dex dex="/Area/Cursos/Android/Projetos/AndroidStudioProjects/Unipharmus/app/build/intermediates/pre-dexed/debug/internal_impl-22.1.1-ecb713630d829732dfc27229f6b1caf6ab0c2185.jar" />
+    </item>
+
+</items>
