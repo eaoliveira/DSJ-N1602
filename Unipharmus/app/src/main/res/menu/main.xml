@@ -1,0 +1,34 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.unipharmus.MainActivity">
+
+    <item
+        android:id="@+id/op_opcoes"
+        android:icon="@drawable/ic_opcoes"
+        android:showAsAction="ifRoom|withText"
+        android:title="@string/op_opcoes">
+        <menu>
+            <item
+                android:id="@+id/op_relatar"
+                android:icon="@drawable/ic_relatar"
+                android:showAsAction="always"
+                android:title="@string/op_relatar" />
+            <item
+                android:id="@+id/op_sobre"
+                android:icon="@drawable/ic_sobre"
+                android:showAsAction="always"
+                android:title="@string/op_sobre" />
+            <item
+                android:id="@+id/op_logoff"
+                android:icon="@drawable/ic_logoff"
+                android:showAsAction="always"
+                android:title="@string/op_logoff" />
+            <item
+                android:id="@+id/op_sair"
+                android:icon="@drawable/ic_sair"
+                android:showAsAction="always"
+                android:title="@string/op_sair" />
+        </menu>
+    </item>
+
+</menu>
