@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
 <?xml-stylesheet type="text/xsl" href="hobby2.xsl"?>
-<!DOCTYPE pessoas SYSTEM "hobby.dtd">
+<!-- DOCTYPE pessoas SYSTEM "hobby.dtd" -->
 <pessoas>
 	<pessoa idade="20">
 		<nome>
