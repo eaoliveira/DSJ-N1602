@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE collection SYSTEM "produto.dtd">
+<collection>
+	<produto>
+		<id>0</id>
+		<nome>Not</nome>
+		<descricao>Uma puta maquina com Ubuntu</descricao>
+		<preco>1000</preco>
+	</produto>
+	<produto>
+		<id>0</id>
+		<nome>Not2</nome>
+		<descricao>Uma puta maquina com Win</descricao>
+		<preco>4000</preco>
+	</produto>
+</collection>

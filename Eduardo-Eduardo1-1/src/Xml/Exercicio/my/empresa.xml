@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<?xml-stylesheet type="text/xsl" href="empresa.xsl"?>
+<!--<!DOCTYPE xxx SYSTEM "empresa.dtd" > -->
+<Empresa>
+
+	<funcionario>
+		<nome>Ze do bixiga</nome>
+		<telefone ddd="11" ramal="1232">123456789</telefone>
+		<departamento>Desenvolvimento</departamento>
+		<empresa>NomeEmpresa</empresa>
+	</funcionario>
+	
+	<funcionario>
+		<nome>Paraiba da empilhadeira</nome>
+		<telefone ddd="19" ramal="4444">987654321</telefone>
+		<departamento>Fabrica</departamento>
+		<empresa>NomeEmpresa1</empresa>
+	</funcionario>
+	
+	<funcionario>
+		<nome>Juca</nome>
+		<telefone ddd="15" >12341234</telefone>
+		<departamento>RH</departamento>
+		<empresa>NomeEmpresa2</empresa>
+	</funcionario>
+	
+</Empresa>

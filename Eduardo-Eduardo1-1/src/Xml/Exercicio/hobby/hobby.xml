@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<?xml-stylesheet type="text/xsl" href="hobby2.xsl"?>
+<!-- DOCTYPE pessoas SYSTEM "hobby.dtd" -->
+<pessoas>
+	<pessoa idade="20">
+		<nome>
+			<prenome>Fulano</prenome>
+			<sobrenome>Figueiredo</sobrenome>
+		</nome>
+		<profissao>Analista</profissao>
+		<profissao>Professor</profissao>
+		<hobby>Desenho</hobby>
+	</pessoa>
+	<pessoa idade="25">
+		<nome>
+			<prenome>Beltrano</prenome>
+			<sobrenome>da Silva</sobrenome>
+		</nome>
+		<profissao>Tecnico de Ensino</profissao>
+		<hobby>Aero-Modelismo</hobby>
+	</pessoa>
+</pessoas>

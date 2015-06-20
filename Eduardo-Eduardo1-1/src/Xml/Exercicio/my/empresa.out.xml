@@ -1,0 +1,23 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Meu XML</title>
+</head>
+<body>
+<h2>Meu XML</h2>
+<table border="1">
+<tr>
+<th align="center"><b>Nome</b></th><th align="center"><b>DDD</b></th><th align="center"><b>Telefone</b></th><th align="center"><b>Ramal</b></th><th align="center"><b>Empresa</b></th><th align="center"><b>Departamento</b></th>
+</tr>
+<tr>
+<td width="10%">Z&eacute; do bixiga</td><td width="10%">11</td><td width="10%">123456789</td><td width="10%">1232</td><td width="10%">Desenvolvimento</td><td width="10%">NomeEmpresa</td>
+</tr>
+<tr>
+<td width="10%">Paraiba da empilhadeira</td><td width="10%">19</td><td width="10%">987654321</td><td width="10%">4444</td><td width="10%">Fabrica</td><td width="10%">NomeEmpresa1</td>
+</tr>
+<tr>
+<td width="10%">Juca</td><td width="10%">15</td><td width="10%">12341234</td><td width="10%"></td><td width="10%">RH</td><td width="10%">NomeEmpresa2</td>
+</tr>
+</table>
+</body>
+</html>

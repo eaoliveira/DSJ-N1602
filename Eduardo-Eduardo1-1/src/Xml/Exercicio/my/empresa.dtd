@@ -1,0 +1,8 @@
+<!ELEMENT Empresa (funcionario+)>
+<!ELEMENT funcionario (nome,telefone,departamento,empresa)>
+<!ELEMENT nome (#PCDATA)>
+<!ELEMENT telefone (#PCDATA)>
+<!ATTLIST telefone ddd NMTOKEN #REQUIRED >
+<!ATTLIST telefone ramal NMTOKEN #IMPLIED >
+<!ELEMENT departamento (#PCDATA)>
+<!ELEMENT empresa (#PCDATA)>
