@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="cadastroteste.xsl"?>
+<!-- DOCTYPE cadastroteste SYSTEM "cadastroteste.dtd" -->
+<cadastroteste>
+		<contato>
+			<nome>contato1</nome>
+			<telefone ddd="11">111111111111</telefone>
+			<departamento>TI</departamento>
+			<empresa>Empresa1</empresa>
+		</contato>
+		<contato>
+			<nome>contato2</nome>
+			<telefone ddd="21" ramal="11">2222222222222</telefone>
+			<departamento>Finanças</departamento>
+			<empresa>Empresa2</empresa>
+		</contato>
+		<contato>
+			<nome>contato3</nome>
+			<telefone ddd="81" ramal="12">3333333333333</telefone>
+			<departamento>RH</departamento>
+			<empresa>Empresa3</empresa>
+		</contato>
+		<contato>
+			<nome>contato4</nome>
+			<telefone ddd="nmtoken">telefone</telefone>
+			<departamento>produçao</departamento>
+			<empresa>empresa4</empresa>
+		</contato></cadastroteste>
