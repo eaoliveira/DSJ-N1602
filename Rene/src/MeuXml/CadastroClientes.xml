@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="CadastroClientes.xsl"?>
-<!DOCTYPE cadastro SYSTEM "CadastroClientes.dtd" >
+<!-- DOCTYPE cadastro SYSTEM "CadastroClientes.dtd" -->
 <cadastro>
 	<cliente>
 		<nome>Joao da Silva</nome>

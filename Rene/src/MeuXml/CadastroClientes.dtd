@@ -4,6 +4,6 @@
 <!ELEMENT nome (#PCDATA) >
 <!ELEMENT ddd (#PCDATA) >
 <!ELEMENT telefone (#PCDATA) >
-<!ATTLIST telefone ramal NMTOKEN #IMPLIED>
+<!ATTLIST telefone ramal CDATA #IMPLIED>
 <!ELEMENT departamento (#PCDATA) >
 <!ELEMENT empresa (#PCDATA) >
