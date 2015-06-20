@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!ELEMENT collection (produto*)>
+<!ELEMENT produto (id, nome, descricao, preco)>
+<!ELEMENT id (#PCDATA)>
+<!ELEMENT descricao (#PCDATA)>
+<!ELEMENT preco (#PCDATA)>
+<!ELEMENT nome (#PCDATA)>

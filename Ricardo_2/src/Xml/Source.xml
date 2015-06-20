@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="NewStyleSheet.xsl"?>
+<!-- DOCTYPE contatos SYSTEM "Dtd.dtd" -->
+<contatos>
+	<pessoa>
+		<nome> Ricardo Silva </nome>
+		<telefone ddd="011" numero="996926820" />
+		<departamento> Manufatura</departamento>
+		<empresa> GM</empresa>
+	</pessoa>
+</contatos>	
