@@ -1,0 +1,72 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"  "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="pragma" content="no-cache" />
+<meta name="expires" content="tue, 01 Jun 2010" />
+<script type="text/javascript" src="scripts/script.js"></script>
+<script type="text/javascript" src="scripts/jQuery1.7.2.js"></script>
+<title>Cadastro de Produtos</title>
+<style type="text/css">
+*{
+font-family: Verdana;
+font-style: bold;
+}
+.caixas1{
+width:120px;
+padding:4px;
+border: solid 2px #3f51b5;
+background: #fff;
+border-radius: 5px;
+}
+#textarea{
+width:384px;
+padding:4px;
+border: solid 2px #3f51b5;
+background: #fff;
+resize: none;
+border-radius: 5px;
+}
+#zone{
+color: #ff0000;
+font-style: bold;
+}
+#button{
+font: 14px Verdana;
+color:#fff;
+font-weight:bold;
+background:#3f51b5;
+height: 35px;
+width: 140px;
+border-radius: 5px;
+}
+#button:hover{
+border-radius: 5px;
+border: solid 5px #3f51b5;
+font: 14px Verdana;
+font-weight:bold;
+color:#3f51b5;
+transition: 0.8s;
+background:#fff;
+height: 35px;
+width: 140px;
+}
+</style>
+</head>
+<body onload="todos()">
+	<h3>Cadastro de Produtos</h3>
+	<hr align="center">
+	<form name="form1" >
+					<b>Nome:</b> <input type="text" class="caixas1" size="10" name="nome">&nbsp; 
+					<b>Preço:</b><input type="text" class="caixas1" size="5" name="preco"><br>
+					<b>Descrição:</b><br><textarea id="textarea" name="descricao"></textarea><br>
+		            <input type="button" value="Salvar" id="button" onclick="salva()"> 
+	</form>
+	<div id="zone"></div>
+	<script type="text/javascript">
+		setInterval(function() {
+			todos();
+		}, 5000);
+	</script>
+</body>
+</html>
