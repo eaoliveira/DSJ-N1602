@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="funcionario.xsl"?>
+<!-- DOCTYPE xxx SYSTEM "funcionario.dtd" -->
+<departamento>
+	<funcionario>
+		<nome>Lucas Santos</nome>
+		<telefone>
+			<ddd>11</ddd>
+			<numero>406053220</numero>
+			<ramal>13</ramal>
+		</telefone>
+		<nomedept>Diretoria</nomedept>
+	</funcionario>
+	
+	<funcionario>
+		<nome>Emerson Nunes</nome>
+		<telefone>
+			<ddd>11</ddd>
+			<numero>945214532</numero>
+			<ramal>121</ramal>
+		</telefone>
+		<nomedept>Programador</nomedept>
+	</funcionario>
+	
+	<funcionario>
+		<nome>Karina Muniz</nome>
+		<telefone>
+			<ddd>11</ddd>
+			<numero>911326441</numero>
+		</telefone>
+		<nomedept>Gerente de Projetos</nomedept>
+	</funcionario>
+</departamento>

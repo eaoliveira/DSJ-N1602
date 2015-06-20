@@ -1,0 +1,8 @@
+<!ELEMENT departamento (funcionario+)>
+<!ELEMENT funcionario (nome,telefone,nomedept)>
+<!ELEMENT nome (#PCDATA) >
+<!ELEMENT nomedept (#PCDATA) >
+<!ELEMENT telefone (ddd,numero,ramal?)>
+<!ELEMENT ddd (#PCDATA) >
+<!ELEMENT numero (#PCDATA) >
+<!ELEMENT ramal (#PCDATA) >
