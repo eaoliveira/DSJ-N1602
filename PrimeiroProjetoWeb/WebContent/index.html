@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<meta http-equiv="pragma" content="no-cache" />
+<meta name="expires" content="tue, 01 Jun 2010" />
+<script type="text/javascript" src="scripts/script.js"></script>
+<script type="text/javascript" src="scripts/jQuery1.7.2.js"></script>
+<title>Cadastro de Produtos</title>
+</head>
+<body onload="todos()">
+	<h3>Cadastro de Produtos</h3>
+	<hr>
+	<form name="form1">
+		Id: <input type="text" size="10" name="id">&nbsp; Nome: 
+		            <input type="text" size="5" name="nome"><br> 
+		            <input type="button" value="Salvar" onclick="salva()"> 
+	</form>
+	<div id="zone"></div>
+	<script type="text/javascript">
+		setInterval(function() {
+			todos();
+		}, 5000);
+	</script>
+</body>
+</html>
