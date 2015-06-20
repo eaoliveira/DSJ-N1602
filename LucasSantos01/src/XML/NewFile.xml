@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE collection SYSTEM "produto.dtd">
+<collection>
+	<produto>
+		<id>0</id>
+		<nome>teste</nome>
+		<descricao>teste,teste,teste</descricao>
+		<preco>00</preco>
+	</produto>
+</collection>

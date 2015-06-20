@@ -1,0 +1,27 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"  "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="pragma" content="no-cache" />
+<meta name="expires" content="tue, 01 Jun 2010" />
+<script type="text/javascript" src="scripts/ScriptProduto.js"></script>
+<script type="text/javascript" src="scripts/jQuery1.7.2.js"></script>
+<title>Cadastro de Produtos</title>
+</head>
+<body onload="todos()">
+	<h3>Cadastro de Produtos</h3>
+	<hr>
+	<form name="form1">
+		Produto: <input type="text" size="53" name="produto">&nbsp;<hr> 
+		Descricao: <input type="text" size="50" name="idade"><hr>
+		Preco:     <input type="text" size="10" name="idade"><hr><br> 
+		         <input type="button" value="Salvar" onclick="salva()"> 
+	</form>
+	<div id="zone"></div>
+	<script type="text/javascript">
+		setInterval(function() {
+			todos();
+		}, 5000);
+	</script>
+</body>
+</html>
