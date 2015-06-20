@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT cadastro (pessoa+) >
+<!ELEMENT pessoa (nome, telefone, ramal?, departamento, empresa) >
+<!ELEMENT nome (#PCDATA) >
+<!ELEMENT telefone (#PCDATA) >
+<!ATTLIST telefone ddd NMTOKEN #REQUIRED >
+<!ELEMENT ramal (#PCDATA) >
+<!ELEMENT departamento (#PCDATA) >
+<!ELEMENT empresa (#PCDATA) >
+

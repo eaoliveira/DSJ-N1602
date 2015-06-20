@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="Cadastro.xsl"?>
+<!--DOCTYPE validacao SYSTEM "Cadastro.dtd" -->
+<cadastro>
+	<pessoa>
+		<nome>Fulano de tal</nome>
+		<telefone ddd="11">22529634</telefone>
+		<ramal>2106</ramal>
+		<departamento>Comercial</departamento>
+		<empresa>IBM SA</empresa>
+	</pessoa>
+	<pessoa>
+		<nome>Ciclano da Silva</nome>
+		<telefone ddd="12">31254789</telefone>
+		<departamento>Departamento Pessoal</departamento>
+		<empresa>Microsoft</empresa>
+	</pessoa>
+	<pessoa>
+		<nome>Jose de Maria</nome>
+		<telefone ddd="21">89746321</telefone>
+		<ramal>2200</ramal>
+		<departamento>Financeiro</departamento>
+		<empresa>Google</empresa>
+	</pessoa>
+</cadastro>

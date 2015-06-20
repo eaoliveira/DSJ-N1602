@@ -1,0 +1,395 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
+    <property name="createdBy">Eclipse BIRT Designer Version 4.4.0.v201405191524 Build &lt;4.4.0.v20140606-1451></property>
+    <property name="units">in</property>
+    <property name="iconFile">/templates/blank_report.gif</property>
+    <property name="bidiLayoutOrientation">ltr</property>
+    <property name="imageDPI">96</property>
+    <data-sources>
+        <oda-data-source extensionID="org.eclipse.birt.report.data.oda.jdbc" name="Data Source" id="7">
+            <list-property name="privateDriverProperties">
+                <ex-property>
+                    <name>metadataBidiFormatStr</name>
+                    <value>ILYNN</value>
+                </ex-property>
+                <ex-property>
+                    <name>disabledMetadataBidiFormatStr</name>
+                </ex-property>
+                <ex-property>
+                    <name>contentBidiFormatStr</name>
+                    <value>ILYNN</value>
+                </ex-property>
+                <ex-property>
+                    <name>disabledContentBidiFormatStr</name>
+                </ex-property>
+            </list-property>
+            <property name="odaDriverClass">com.mysql.jdbc.Driver</property>
+            <property name="odaURL">jdbc:mysql://localhost/java</property>
+            <property name="odaUser">root</property>
+            <encrypted-property name="odaPassword" encryptionID="base64">c2VuYWk=</encrypted-property>
+        </oda-data-source>
+    </data-sources>
+    <data-sets>
+        <oda-data-set extensionID="org.eclipse.birt.report.data.oda.jdbc.JdbcSelectDataSet" name="Data Set" id="8">
+            <list-property name="columnHints">
+                <structure>
+                    <property name="columnName">idcadastro</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="displayName">Código</text-property>
+                    <text-property name="heading">Código</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Nome Completo</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">Nome Completo</text-property>
+                    <text-property name="heading">Nome Completo</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Endereço</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="displayName">Endereço</text-property>
+                    <text-property name="heading">Endereço</text-property>
+                </structure>
+            </list-property>
+            <list-property name="parameters"/>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">idcadastro</property>
+                        <property name="dataType">integer</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">Nome Completo</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">3</property>
+                        <property name="name">Endereço</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">Data Source</property>
+            <list-property name="resultSet">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">idcadastro</property>
+                    <property name="nativeName">idcadastro</property>
+                    <property name="dataType">integer</property>
+                    <property name="nativeDataType">4</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">Nome Completo</property>
+                    <property name="nativeName">Nome Completo</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">3</property>
+                    <property name="name">Endereço</property>
+                    <property name="nativeName">Endereço</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+            </list-property>
+            <xml-property name="queryText"><![CDATA[select cadastro.idcadastro as 'Código', concat(cadastro.nome, ' ',cadastro.sobrenome) as 'Nome Completo', concat(cadastro.endereco, ', ',cadastro.complemento) as 'Endereço'
+from cadastro]]></xml-property>
+        </oda-data-set>
+    </data-sets>
+    <styles>
+        <style name="report" id="4">
+            <property name="fontFamily">sans-serif</property>
+            <property name="fontSize">10pt</property>
+        </style>
+        <style name="crosstab" id="5">
+            <property name="borderBottomColor">#CCCCCC</property>
+            <property name="borderBottomStyle">solid</property>
+            <property name="borderBottomWidth">1pt</property>
+            <property name="borderLeftColor">#CCCCCC</property>
+            <property name="borderLeftStyle">solid</property>
+            <property name="borderLeftWidth">1pt</property>
+            <property name="borderRightColor">#CCCCCC</property>
+            <property name="borderRightStyle">solid</property>
+            <property name="borderRightWidth">1pt</property>
+            <property name="borderTopColor">#CCCCCC</property>
+            <property name="borderTopStyle">solid</property>
+            <property name="borderTopWidth">1pt</property>
+        </style>
+        <style name="crosstab-cell" id="6">
+            <property name="borderBottomColor">#CCCCCC</property>
+            <property name="borderBottomStyle">solid</property>
+            <property name="borderBottomWidth">1pt</property>
+            <property name="borderLeftColor">#CCCCCC</property>
+            <property name="borderLeftStyle">solid</property>
+            <property name="borderLeftWidth">1pt</property>
+            <property name="borderRightColor">#CCCCCC</property>
+            <property name="borderRightStyle">solid</property>
+            <property name="borderRightWidth">1pt</property>
+            <property name="borderTopColor">#CCCCCC</property>
+            <property name="borderTopStyle">solid</property>
+            <property name="borderTopWidth">1pt</property>
+        </style>
+    </styles>
+    <page-setup>
+        <simple-master-page name="Simple MasterPage" id="2">
+            <page-footer>
+                <text id="3">
+                    <property name="contentType">html</property>
+                    <text-property name="content"><![CDATA[<value-of>new Date()</value-of>]]></text-property>
+                </text>
+            </page-footer>
+        </simple-master-page>
+    </page-setup>
+    <body>
+        <grid id="9">
+            <property name="width">7.947916666666667in</property>
+            <column id="10">
+                <property name="width">1.6041666666666667in</property>
+            </column>
+            <column id="11">
+                <property name="width">6.197916666666667in</property>
+            </column>
+            <column id="12">
+                <property name="width">0.14583333333333334in</property>
+            </column>
+            <row id="13">
+                <cell id="14">
+                    <image id="25">
+                        <property name="height">1.3229166666666667in</property>
+                        <property name="width">1.3541666666666667in</property>
+                        <property name="source">embed</property>
+                        <property name="imageName">2034284.png</property>
+                    </image>
+                </cell>
+                <cell id="15">
+                    <label id="26">
+                        <property name="fontSize">16pt</property>
+                        <property name="fontWeight">bold</property>
+                        <property name="paddingTop">50pt</property>
+                        <property name="textAlign">left</property>
+                        <text-property name="text">Relatório de Clientes gerados pelo BIRT</text-property>
+                    </label>
+                </cell>
+                <cell id="16"/>
+            </row>
+            <row id="17">
+                <cell id="18"/>
+                <cell id="19"/>
+                <cell id="20"/>
+            </row>
+            <row id="21">
+                <cell id="22"/>
+                <cell id="23"/>
+                <cell id="24"/>
+            </row>
+        </grid>
+        <table id="27">
+            <property name="width">7.947916666666667in</property>
+            <property name="dataSet">Data Set</property>
+            <list-property name="boundDataColumns">
+                <structure>
+                    <property name="name">idcadastro</property>
+                    <text-property name="displayName">Código</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["idcadastro"]</expression>
+                    <property name="dataType">integer</property>
+                </structure>
+                <structure>
+                    <property name="name">Nome Completo</property>
+                    <text-property name="displayName">Nome Completo</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["Nome Completo"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">Endereço</property>
+                    <text-property name="displayName">Endereço</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["Endereço"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+            </list-property>
+            <column id="40">
+                <property name="width">0.875in</property>
+            </column>
+            <column id="41">
+                <property name="width">2.1979166666666665in</property>
+            </column>
+            <column id="42">
+                <property name="width">4.875in</property>
+            </column>
+            <header>
+                <row id="28">
+                    <cell id="29">
+                        <label id="43">
+                            <property name="backgroundColor">#0080C0</property>
+                            <property name="fontWeight">bold</property>
+                            <property name="color">white</property>
+                            <property name="textAlign">left</property>
+                            <text-property name="text">Código</text-property>
+                        </label>
+                    </cell>
+                    <cell id="30">
+                        <label id="45">
+                            <property name="backgroundColor">#0080C0</property>
+                            <property name="fontWeight">bold</property>
+                            <property name="color">white</property>
+                            <property name="textAlign">left</property>
+                            <text-property name="text">Nome Completo</text-property>
+                        </label>
+                    </cell>
+                    <cell id="31">
+                        <label id="47">
+                            <property name="backgroundColor">#0080C0</property>
+                            <property name="fontWeight">bold</property>
+                            <property name="color">white</property>
+                            <property name="textAlign">left</property>
+                            <text-property name="text">Endereço</text-property>
+                        </label>
+                    </cell>
+                </row>
+            </header>
+            <detail>
+                <row id="32">
+                    <cell id="33">
+                        <data id="44">
+                            <property name="fontSize">9pt</property>
+                            <property name="resultSetColumn">idcadastro</property>
+                        </data>
+                    </cell>
+                    <cell id="34">
+                        <data id="46">
+                            <property name="fontSize">9pt</property>
+                            <property name="resultSetColumn">Nome Completo</property>
+                        </data>
+                    </cell>
+                    <cell id="35">
+                        <data id="48">
+                            <property name="fontSize">9pt</property>
+                            <property name="resultSetColumn">Endereço</property>
+                        </data>
+                    </cell>
+                </row>
+            </detail>
+            <footer>
+                <row id="36">
+                    <cell id="37"/>
+                    <cell id="38"/>
+                    <cell id="39"/>
+                </row>
+            </footer>
+        </table>
+    </body>
+    <list-property name="images">
+        <structure>
+            <property name="name">2034284.png</property>
+            <property name="type">image/png</property>
+            <property name="data">
+                iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAYAAADDPmHLAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMA
+                AAsTAAALEwEAmpwYAAAAB3RJTUUH3QoPFTQhnQkvlAAAF+ZJREFUeNrtnXl8XGW5x79nmS3LTJZJmyZp
+                m5ZAaUsrBSylGxSoIHKVRhZRYdSrotcFUXG56gBBcUfxo4igaC4qoDAspRTZWijd6ELXdE+aNmmafTKZ
+                zH7OuX/MZDrTjS6zZ55/kpkz875n3uf3Pvv7HBjBVN/QuKC+oXHRSF4DYQQxG4fdNvz/F4F7gTGRyy7g
+                Z8DPHHabFvvZXCdxJDA+QuX1DY2/q29o1IA/xTAfwAw8AKj1DY1/A8456rt5CZDFAJgP/BBYeJpfXQ/c
+                57DbXsoDIHvF/D1A1VkO6wJ+Cvw8F9WDmCuMjxHzD8WI+aoEDG+OACAn1YOQIwA4UzF/pvQucH8uqAch
+                G3f7UWLeDlSn6XZcEePxF9mqHsRsYnyMmP9tjJivTuNtmSPuY9aqByGLAHA58IMUivkRoR6ELGD8F4Ef
+                ATVZpq0GgfuBX2WyehAyjNk47DbqGxrLI0bdN3LE22qMxBRaMg0ImWYDzK9vaHwV6EkX8y2iGyXxy2ID
+                musbGtcC1+clQAaLeRGNzxa/wGODixDRkuk9/DgT1IOYBmYP/y2vb2h8MMaazwgdP6QZWWhai5rcpTED
+                v4jxHmrT5T2kQwXMjRHzd2WeUaThVguYZdiaqiltQEu61IOQwp2fFdb8kGZk8ei7eHroQzw3tCAdt+Ak
+                HFxKiXoQk8TsjBbzJ6OxUhc6IZTOWyiJUQ9/TbZ6SJYKmJPJYv5EpCFwleldFCQOBCsz4ZY+k2z1ICR4
+                52dr0AYAFYGnR30fveDj1q6fE9B0mXaLCVcPcgJEfTnhEO1dZDEFNJm7S55AQ2C9fxoe1YScXlVwMvXw
+                i/qGxseBBqA1rRIgot+zmkJIXGdayRfMzyGicGfv3bSFRmfL7ZscdpsvLRIgF2iY+XeYHQQ0mde8s2kN
+                jUFCzZafcFabeEQDwK/puaXwVW4rfhm/pqNPNfPnwUXZxPyM9QKywOAT+W5JI58sfgW/pkNB4u7eOxGP
+                w3wVEZ9mYKp+H8XiUE6tw4iUAEWCh5+UPcwoqY+QJhHSJL7W+x28mjHuc17NwBRdCx8pWMEYuZeHXTcy
+                oBYfFyR5AGQBKUhcbNjB9y2PoyChIeBUi/nfvq8woBbFqYarTO9yc+FrVMq9PDRwK78a+CBGIZBTzB9R
+                AAhqMp8qXsotha/i1/SIqDSHavhR35ej6V+fpucK0wY+W/QiVqmfNf7pfKP326gIGIVATq7LiABASJP4
+                QelfuFi/E7+mRy+EeMkzl0dd9eiFIAAFgo+flD3MufIBVER+PXA7y70XR6/nKuU8APyangfLH6RWPoSC
+                iEEI8idXPUs8c6PMHSt38tOy3yOg4tUMfKv3LrrV0pxnfs4DIKjJfNvyBLXyITQE9EKIP7nqedk7J5rw
+                GScf5pdlD6EgEtRkvt57NwNqEQIaI4Fy2g281LiNy00b0BAQgP94ZrHEMxcZBQAJlR+XPYyCiF4I8v2+
+                r8YZg3kAZDEFNB03F74aTegENJnHBhdFd76GwCeLXomCYYVvBgdClYw0ylkAhJA4V3cg+volzzy0mKip
+                T9NztWltZBE0tgbqkAUlD4BcJJ0QYntwYpxe1xAoEgeBcBp4vNwRB5A8ALLeulXYExwPhOv8nGrxsR+K
+                4fflxo3JLgTNAyCVpBeCvOGdiYiKoolUSd1x1yVUOmJSvgYhgK1ocTLOBOQBkC562TMHl1qEgsRc4yYU
+                pGMAMqwWNAQWFb7JeTF2Qx4AOaD7f+z8b/RCkHnG9yiJ6PxhtfDc0II4se/XDNxT+mg+HZxLtD9UxaOu
+                elREvmL+1zF1fr903oYhJuIno3Bj4esjxiAUc/8HqrzkmcsSz1w+aNjGPON7cdfX+6fwzNCVcVm+afq9
+                hDQpD4DcMQjDIeDFnsv5luXvFAhHSuhkQeFvgx+lQ7EeUQXoGCk0Ykze4STQy945NJQ+QlCT4zyAxZ75
+                iGiIqKz3T0334ZA8AJIFgkdd9az2T+e/Ct+Ou+ZTDQho9KglLPbMe9+xQoqKLxDCHwyhKNlrNOZMNlDT
+                IKgoBEIKY60Wqq0WAHYd7CaoKHHu39NDC5lr2ERQk9EJIVREpur3EUDHD/v+J5ofOB6pqsZHL5vK/Asm
+                UFNhweXx03K4l5fW7mDTvkPoZCkPgFSSxx9gWu0YZk8Zz8xJ4xhdWsyKbc28s30/G/e2R1y+o3+0wmr/
+                9KiYt4pOLjLs5PPdP8L/PqeBRpcWsaX5EE8uf49RliKuv3Qyn7jiQmZOGsfK7ft54Kk3MerlPABSsePr
+                517AotkXUGjUc6DbySNLVvPuroMUGHQIgnBSR244ACSicZlxC5/rvgfDUWVfmqahqBqKqhJSVKrLLXQP
+                hKuCi00GvIEgT7+9mYM9Tu6+8QrmTK1l0ZwLWLpuZx4AyaQaq4WHvvyxuPceW7qWDXvakCWRkKKGASAI
+                JxDjYZ2tAYqq8W//LFTNjcVcSFmxiQpLIZVlZsaUFlNttTC2ooTVTa08886WY40oQWDZ5n3cdtXFVJYW
+                8+EPTuL5Vdsw6OQ8AJJF3kCQth4nNdaS6Hv3334NAD2uIfoGPQy4fXgDoeNIDo3KsiIEQUAvS5SbCzHq
+                ZXRSvO5WNY2tLR3sbu/hwWffxuMPnBBQsijiGvJRWVqMpcCIlkXFRFkJgF6Xhy/9zoG5wMAFtZWMrSih
+                xlrCqJJCDDodVZHdKwgCRSZDHPPdXn8ERCGcQ172tPfg8vjocrrp6HPR3uOitasfl8ePXpaQJBEBTsh8
+                IlKkpiIMxtYuJ5Ik5AGQdJdOJ+MPKmzY086GPe2oEV2tAUpEBYSZo8aJ6+H3BeHIa0EQkMR4phUYTi0Y
+                pAHXXnJe9PPPrNhyjDTJAyAVAQ1RwB9SmT2lFq8/yM6DXSmZt7y4gK99bC4Ab21pZsOetqxyBXMGAFZz
+                IffetpAxZWYu//YfsVoKT3sMRVVRVI1gSKGytBjnkBdJFE/ghWjUWEv41RfDjTueX7Wdx19dl48DpIMU
+                VcO28BIqy8wA/ON7n2TNjgO09ThxeXz4AiEO9w+iavF+pNVSiEEnM6qkkMpSMzVWCzVWC+NHlwLQdKCT
+                X/57Oc4hH2KMDeD1B6mfO43PXzuTfreXhmffZmtLBzop+wKrOQEASRT422vrqKsqZ1RJETVWCzfOm3bW
+                49ZVWbnzhnk89PwKXB4/IUVl/OhS7v30QtxeP7/893Le2tqMQScjS9kZVc8ZFdDr8vDZXz9NXVUFsyaP
+                Y1JNBeNGlWA1v78q8AVC9LiGaOsZoLWzn5bDfexs66Kz341BJyGJIpqmMWdqLWOtJXz94RcY8PjQy1LW
+                +Ps5DwAAo15HW4+TZ1Y4CSlqNIJXZDLEuYNRxvuDOIe8iKKAJAhIkhin82M9AUEQWNW0P3pdL+dGvUBO
+                Hg3zB0NUWy30ujxomoamaQx6jt9Gp9CoPw1Vk3vJ05z7RdVWC4/eeSM3zZuO1x9APYWwnEY4vesPhvAF
+                Q4SUkVMTmFMSwBcI8cBnrqXIZKCq3ExdVTl72nvpd3s41OtiyBfA7TuS8Cky6jEXGBlbUUK11Ux1uZmq
+                cgs9A0M8smQNK5taKDDo8wDIFjLoJP6x7D3uuG4WALWjy6gdXXb6MQVLIT/85FU43V6+8acXGfT48wDI
+                JNI0CITCorqkyEQgpKCqGpIo8Mq6XWxu7uDm+dOZPaX2tI21XtcQ7+07xOqmVlbvbMWok0+aB8gDIIXk
+                8QeZVlvJ7CnjmTt1AgVGPRv3tNHWO8DbW5vp7HcjigKd/YM89Nw7/Pxfy6gut1BXbaXGasFcYKSk0BQd
+                T9VUOvvddA+4ae9xsbu9G38whE6WEAUBk/798wEhRWX+tAm8tbU5q3IAWQUAXyDEhy4+j9uvvpjSIhMr
+                m/ZzzxOv0tLZh0Enx0XpotatKFBg0NPv9rJu10HW7TqIpmkRo1CICyLFq5HTW5JASOH6S6fQ5XSz91Bv
+                HgCJJkXVuN92DRfVhR8PeLhvkAeefBNZEk9ph8aSIIT9/bMhVdOiXsKMc6q47aqLkCWJ3W09iKKQB0Ci
+                yVJojDIfoLKsmCX3f45NzYfYsKeNve29NB/uxeXxIYkioiBEGXE6fns4bSxEq4UUNRw/kCWRMWVmKsvC
+                1UHjKkqYNLaCCaPL2Huol6fe2sTqplaMehlFVfnAxCo27TuUNaHhjAeAa8jHfX9/jY/MnMyMuqooUy+c
+                WMWFE6uOMeD6Br109g+iQTgBpJ5CHEDTqLZaUFUNq6UAWZKoLjdTaNTHGYB9gx62tR7mxdVNrNnRypAv
+                gE6W0MkiOlniS9fMQidLbG7uSOUSCWn7MkB9Q6MPMCT7V4YUlWBIocCop9oaztxVlpoZU1bMKEsRpcUm
+                LIVGzAXGs5pn0Ouny+mm2znE4f5B2nqcNB/uo7WzH38whCxJiAIEFRVJFJh1/niumD6RWZPHs2bnAX7y
+                zzfQ61JnDDrstrQ3i+4CxiZdVEkishROyrR1D9DWPRAV3f6ggiCAgBCuChre0RroZRGrufCYnl8C0O/2
+                4g2EEAVo7xlAFAVEQQznBkQBECKVwSqqplE7qpS6Kivnjx3FlPGjqY2kjbe3dvLdv7zMjgOdKWV+pqiA
+                Q6kAwImo2GTko7MmMnFMOQNDPg52O+lyulFUlbZuF4GQyu72nmgt4NFUUmjCaNCF6wEqzEiiRLnZxChL
+                MRUlhVRYCqm2WuKyiv1uL1tbOnhh9XZWbm/BFwyhk6R0FIP0ZgIA9gGXpi82EODFNU34AiEmjimnbkw5
+                F55TzZgyM1XlxRhkmYqSwohB9/4M8gaChBSVjl4Xbl+AngEPTa1ddPSHi0UPdDoJhBR0shR1IdPo/zdn
+                AgCa0y3GJFGk0Kins3+Qzv5BVjbtD4ttVUODqCEYWyB6IjdxOKYgiUL0dax7J4pCJp382ZsJANicibpN
+                EkWk3D/6ui0TALAlVTt8OIY3MORDGHkd3Y5Hm9LqQ8a4gkk9C3P+2FH85DPXRl9f+4M/n1YhRw6T1WG3
+                nZUhmCghuT2Zv1LVtDyrjyX/2TI/kQB4M8+PlNOyRAxy1gCIPDzyP3l+pJxeScQgZ20EOuw26hsal6Zz
+                JXyBEGXFJiaPG43VXEBJkQm318/B7oG4o1qaBtVWc7RCeMDtpdPpPma8cnMB5ZHAjz8YYv/hPgRBwBcI
+                UlZcEDePc8hHR6+LDXvbovGAipIiPnzJJDqdbgoNOp56azOfWjCDJ5dvSmSS6OWMAEAEBGp9Q+Mm4MJU
+                Ml5RVT4yczI3XDaVipLj9/nXNLj/n6+zaV87giAw6/xxfOrKiwBwewPc/MATcWllTdOonzONay+ZBMDy
+                zft40PE2N8y+gBtmT6WsuOC484QUlR//83W2tHTQ2TdIUFFZ+u5O/vLNmxg/upSL6qp54o2NiQKA22G3
+                7ckIFRBDf0/93heYVFMRZf6h3gF2t3fTcrgvJrgD9k9dTUlRuBLojU1HYidFJj2VpcVHgUqLe2/HwS5E
+                UWDq+NFR5g/P0xwzjyyJ3HvbhygpMiGK4bSyQS+zfncb1eUWVm7fn0jX9elEDSQnGAC/Sm2wR+DVjbt5
+                deNuNjd3oGkaohBu/lJo0PHYXTdRHBH3H/7g+Ty5fBOdkT4AYyLnCBfOOC+u80cgpDB53Kjo66YDnUii
+                yOI1TSxe23TMPOYCA498/ePRea68sI7nVm7jH2++hyyJ/P7FldH4RQJPEf01EU8OT6gEcNhtnUBTqmXA
+                jgNd7DjQFT2mpZMl9LJEUFH599tHgpSjS4rDu1KWWdV05IHb86bV4g8e6SRiNRfEMWpPe09UEhxvHl8g
+                hOOdrdHPjx9ViqKqUVE//LkEJor8DrttZSKYn2gVAPBIuk3j4ZKtYEjBOeQ7RmUIAizbvC/6To21JK5Q
+                dPqEMdH/N+5tP+GujZ2n1zUUZ3OQ3D7Df0zkYInOavwe+F2qma6o4fN/c6dOYEJlGWVFJkqKTFGxfDTt
+                6+jFGwhGjb8FF9bx8rs7UDWNGTHlZ+sjTadiDb3iglOfJ0n0m0SJ/4QDwGG3afUNjU8Ct6ZqNTRN465F
+                87l8+sRT/o5JL7Ns016umzk5rAYuqOWFVdsIqSqXnFsT/dzanQfidvz3blnAZZPHp1PAbXDYbQcyVgJE
+                gkL3pwoAwZDCQ1/+GBMqw6d/DvcP8sLq7bRE/PYZ51Rx8/wPHOs7CAIrtu2PAuC86gqMepkikyHqLXT0
+                uTjcP4hRJxMIKfzhq4sYF2kEdarzJIHuS+TuT4YEANhR39C4Abg42asxa/L4KPObO3r5yh+ejzvSXVl6
+                4mcAbmnpQImcJgKYdf54xpSbo9eXb27GGNH/c6dOiDL/dOdJIPU77LbFiR404RnziBT4VipW5NyqIy3e
+                hzuEnirpZImV21uiryeNrWD+tAnR16+sD3f71CLXhmnFtpbTmieB9J1kDJpwADjsNhx221upcAm1mFJP
+                q6Uw7lh3IKRwUV3NSWMIK7YdAcDsKbVUl1uirl+f2xs16+WY8wWVZcVxlUWBkMLM88Yl+6e6HXbbn5Mx
+                cFJqmyJS4HZgfTJX5VCvK/r/1TPOpdflobmjl8qyYj4+d9r7loiviTHySouOuILPvrMleqhUEIS4yOI1
+                F0/C6faxr6OX8aNKuf7SyVgKjckGwBeSNXBSABCxBTbUNzT+B7gmoYafokTr9pZt3odt4SVR5t1yebwh
+                9sr6XVw+feIJj5CJgsDGve1xJ4+GfAFWbN8f1f8Ar723B9vCSzAXGI47z9J1u7hqRl2y2sbsc9htTyUL
+                AEkrZ41IgdeBb5/tWNVWC1dMPweA7oEhFq9tQpbC9fuL1+xAliXMBQYEQWDIF2D9njZ++9w7LF23A3OB
+                ke6BIXYe7GJvR0/cSR9RFOh3e5ElkdZOJ61dTp5ftY3D/YPHqIsl7+5AL0uUFJnQNI0hX4ANe9r42b+W
+                89rGXZQUmejsdx93nrOk6yYvWNS+Y9nzSeFT0ivr6hsaHwHuOJsxPnbZVG6/OuxUvLFpD79/cVXcieDh
+                fgHDB3910pGS7eHK4OHWsMeLIxw5MazFtZM93mcDIeWM5jlDetNht12VTP6ISWY+DrvtS8AZt9jwBYJc
+                eWHdEbG+bvcxCywI4USLUS9j1MlxR76HT/mciCnhPsEikhj+e7KdKwjCGc9zhnRDRJImjZJa4B4TsLgZ
+                eOFMxph3wURqIo9/2dZ6mJ1tXTnTou196A6H3TaY7ElSUjnvsNte5AwqWFRNo8gUrv51eXw0/P21kcL8
+                9xx226OpmCgl1fURMSYDQ8Bp1XNrmsaEynIOdPWPpOrg0UBXIkO+aQVADAguBdaQp5PRpx122z9SNVnK
+                z9fUNzTeB9jzfD4uPeWw225N5YQpPz3nsNvuAd7N8/oYOuSw225NttWfCRKAiB3gBEx5vkepCuhIhd5P
+                KwBiQHAesCvPdwCudNhty9IxcVrP2NY3NH4EeGmEM/8uh93223RNntYT9A67bQnwzRHM/EfSyfy0AyAC
+                gt8AvxmBzH/ZYbd9OdVGX0apgKPUQSPhGoKRQCscdtv8RNf3ZaUEGDYKHXabDXhmBDB/XaYwP2MAEDlh
+                jMNuuwn4Vw4zf63DbpuZKczPGAAcBYJbgD/nIPNfd9htszKJ+ZDEiqAzoR3Lnh8GweLJCxZpwIIcYf4T
+                DrutPtOYn1FG4Alsg88Cj2c583/qsNv+NxOZn/EAiIDgGhLUDiUNdEeq8vo5C4AICCYSbkhZlEXMn+Ow
+                21Zl+k1mSy/NZqAM2JoF99oBVGQD87MGABHdGXTYbdOBxgy+1WUOu60K6MkWMZU13XRj3MTPAJ/IwFv8
+                jsNuuzJTjb2stgFOYBdUAKuBc9J8K/3AZQ67LStT29ncT7vbYbfVkYaOJDH0nMNuKyOL6xpyoud2fUPj
+                bGApYE7RlBpwk8NuezbbRH4uSYBYWuWw2yzAYymYawlgcNhtz8YYqHkAZIiB+EXCnUmS8QjPIHCdw267
+                PvJ/TlDOPFMjZidudNhtVuDnCRz+ccKPxluaC7s+52yAk9gGVsJtVa88wyG2AvUOu21vtuv6nJcAJ6Ce
+                yPHqKwk/3/BUyQd8IhJ42ptru37ESIAYSTBsJ3wN+DVwsi5P9znstnsZITQiH71U39D4I6DhqLd/B3zL
+                YbeFRtJaiCMRAA677X7CxTC/Bf4PMDvstjuB0Ehbi/8HclGhwGF1taMAAAAASUVORK5CYII=
+</property>
+        </structure>
+    </list-property>
+</report>
