@@ -28,16 +28,19 @@ function todos() {
 			if (xhr.status != 404) {
 				var xml = xhr.responseText;
 				var tbody = "<h2>Registro</h2><form><table border='1'>" +
-				"<tr><th>Del</th><th>ID</th><th>Nome</th><th>Idade</th></tr>";
-				$(xml).find("id").each(function() {
-					//var id = $(this).find("id").text();
+				"<tr><th>Del</th><th>ID</th><th>Nome</th><th>Descricao</th><th>Preco</th></tr>";
+				$(xml).find("produto").each(function() {
+					var id = $(this).find("id").text();
 					var nome = $(this).find("nome").text();
-					//var idade = $(this).find("idade").text();
+					var descricao = $(this).find("descricao").text();
+					var preco = $(this).find("preco").text();
 					tbody += "<tr><td>" +
 							"<input type='button' value='del' onclick='apaga("+id+")'/>" +
 							"</td><td>" +
-							+ id + "</td><td>" + nome + "</td><td>"
-							+ descricao + "</td></tr>";
+							+ id + "</td><td>" 
+							+ nome + "</td><td>"
+							+ descricao + "</td><td>"
+							+ preco + "</td></tr>";
 				});
 				tbody += "</table></form>";
 				document.getElementById("zone").innerHTML = tbody;
@@ -57,9 +60,10 @@ function apaga(chave) {
 	xhr.onreadystatechange = function() {
 		if (xhr.readyState == 4) {
 			if (xhr.status != 404) {
-				document.form1.idade.value = "";
+				document.form1.id.value = "";
 				document.form1.nome.value = "";
-
+				document.form1.descricao.value = "";
+				document.form1.preco.value = "";
 				todos();
 			} else {
 				document.getElementById("zone").innerHTML = fname
@@ -73,11 +77,14 @@ function apaga(chave) {
 function salva() {
 	var id = document.form1.id.value;
 	var nome = document.form1.nome.value;
+	var descricao = document.form1.descricao.value;
+	var preco = document.form1.preco.value;
 	var reg =  
 	  "<produto>" + 
 	    "<id>"+id+"</id>" + 
-	   //"<descricao>" + descricao + "</descricao>" + 
 	    "<nome>" + nome + "</nome>" + 
+	    "<descricao>" + descricao + "</descricao>" + 
+	    "<preco>" + preco + "</preco>" + 
 	   "</produto>";
 	var xhr = createXHR();
 	xhr.open("POST", "srv/bean/", true);

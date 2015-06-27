@@ -33,6 +33,7 @@ public class NomeBean {
 		return dao.salvar(n);
 	}
 
+	
 	@POST
 	@Path("update")
 	@Consumes(MediaType.APPLICATION_XML)

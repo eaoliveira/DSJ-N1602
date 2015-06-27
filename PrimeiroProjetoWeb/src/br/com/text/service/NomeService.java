@@ -53,13 +53,16 @@ public class NomeService {
 	public Produto salvar(Produto obj) {
 		Produto novo = null;
 		System.out.println("1 nome " + obj.nome);
-		System.out.println("1 nome " + obj.id);
+		//System.out.println("1 nome " + obj.id);
 		if (obj.getId() == (Produto.NOVO_REGISTRO)) {
 			novo = new Produto();
 			int novoId = (++id);
 			novo.setId(novoId);
-			System.out.println("1 nome " + obj.nome);
-			System.out.println("1 nome " + obj.id);
+			novo.setNome(obj.nome);
+			novo.setDescricao(obj.descricao);
+			novo.setPreco(obj.preco);
+			//System.out.println("1 nome " + obj.nome);
+			//System.out.println("1 nome " + obj.descricao);
 			//novo.setDescricao(obj.getDescricao());
 			//novo.setPreco(obj.getPreco());
 			lista.add(novo);
