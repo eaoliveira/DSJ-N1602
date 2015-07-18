@@ -1,0 +1,76 @@
+
+body {
+	font: 18px Arial;
+	margin: 10px;
+}
+
+.tabela  {
+	text-align: left;
+	width: 70%;
+	margin-left: 15%;
+	margin-right:  15%;
+}
+
+.mensagem {
+	text-align: left;
+	width: 60%;
+	margin-left: 20%;
+	margin-right:  20%;
+}
+.menu {
+	text-align: left;
+	width: 30%;
+	margin-left: 35%;
+	margin-right:  35%;
+}
+
+.botoes {
+	margin-left: 45px;	
+}
+
+h1 {
+	margin: 0;
+	padding: 16px 0;
+	color: #000000;
+	font: bold 40px Arial;
+}
+
+h2 {
+	font: bold 24px Arial;
+	color: #595959;
+	text-align: center;
+}
+
+h3 {
+	font: bold 18px Arial;
+	color: #5959f9;
+}
+
+p {
+	color: #3a34c3;
+	margin: 20px;
+	margin-left: 50px;
+	text-decoration: none;
+}
+
+b {
+	color: #3a34c3;
+	text-decoration: none;
+}
+
+a {
+	color: #3a34c3;
+	text-decoration: none;
+	text-shadow:5px 5px #cfcfcf;
+}
+
+a:hover {
+	text-decoration: underline;
+	text-shadow:5px 5px 10px blue;
+}
+
+table {
+	color: #3a34c3;
+	margin: 20px;
+	text-decoration: none;
+}
