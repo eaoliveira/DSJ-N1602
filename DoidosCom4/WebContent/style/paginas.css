@@ -1,0 +1,43 @@
+body {
+	font: 18px Arial;
+	margin: 10px;
+	background-color: #EEEEEE;
+}
+
+h1 {
+	margin: 0;
+	padding: 16px 0;
+	color: #000000;
+	font: bold 40px Arial;
+}
+
+h2 {
+	font: bold 24px Arial;
+	color: #595959;
+}
+
+h3 {
+	font: bold 18px Arial;
+	color: #5959f9;
+}
+
+p {
+	color: #3a34c3;
+	text-decoration: none;
+}
+
+b {
+	color: #3a34c3;
+	text-decoration: none;
+}
+
+a {
+	color: #3a34c3;
+	text-decoration: none;
+	text-shadow:5px 5px #cfcfcf;
+}
+
+a:hover {
+	text-decoration: underline;
+	text-shadow:5px 5px 10px blue;
+}
