@@ -1,0 +1,1025 @@
+<html><head><title>JavaServer Faces HTML Tags Reference</title>
+    
+    
+    <link rel="stylesheet" type="text/css" href="jsftags-guide_arquivos/exadel-tutorial.css">
+    <style type="text/css">
+           body {margin-right: 150pt}
+           
+        </style></head><body>
+ 
+<!-- <table class="header" align="center"><th colspan="2">index</th><tr><td>Go to <a href="http://www.exadel.com/web/portal/products/Tutorials">list of available tutorials</a></td></tr><tr><td>Go to <a href="http://www.exadel.com/web/portal/products/Training?tr">Exadel training information</a></td></tr></table> -->
+         <h1>JavaServer Faces HTML Tags Reference</h1>
+         <p>This
+is a handy reference guide for the standard HTML tag library that is
+built into JSF. For these tags you need to use the following <code>uri</code> attribute for the JSP <code>taglib</code> directive at the top of the file: </p><pre>http://java.sun.com/jsf/html</pre>
+The table that follows shows you examples of HTML output and
+browser-rendered output for example uses of the tag library. Also, you
+can <a href="#run">skip ahead</a> to some instructions for downloading this reference as a Web application.<p></p>
+<h2>Categories of JSF HTML Tags</h2>
+<p><a href="#form">UIForm</a> | <a href="#command">UICommand</a> | <a href="#graphic">UIGraphic</a> |
+    <a href="#input">UIInput</a>
+    | <a href="#output">UIOutput</a>
+    | <a href="#message">UIMessage and UIMessages</a>
+    | <a href="#selectboolean">UISelectBoolean</a>
+    | <a href="#selectmany">UISelectMany</a>
+    | <a href="#selectone">UISelectOne</a>
+    | <a href="#panel">UIPanel</a>
+    | <a href="#column">UIColumn and UIData</a>
+    | <a href="#selectitems">UISelectItems</a>
+    | <a href="#selectitem">UISelectItem</a></p>
+<h2>JSF HTML Tag Reference</h2>
+   <table border="0" width="100%">
+     
+    <tbody><tr>
+     <td class="aligncenter"><font size="+1">JSF Tag</font></td>
+     <td class="aligncenter"><font size="+1">Rendered Result</font></td>
+     <td class="aligncenter"><font size="+1">HTML Source</font></td>
+    </tr> 
+<tr>
+<th colspan="3"><a name="form">UIForm</a></th>
+</tr>
+<tr>
+<td colspan="3" class="stub">
+form
+</td>
+</tr>
+<tr>
+<td class="vmiddle"> 
+<pre>&lt;h:form id="jsftags"&gt;
+ ...
+&lt;/h:form&gt;
+</pre>
+</td>
+<td class="vmiddle">
+No Renderer 
+</td>
+<td>
+<pre>&lt;form id="jsftags" method="post"
+    action="/jsftags/faces/pages/tags.jsp"
+    enctype="application/x-www-form-urlencoded"&gt;
+    ...
+    &lt;input type="hidden" name="jsftags"
+      value="jsftags" /&gt;
+    &lt;input type="hidden" name="jsftags:link" /&gt;
+&lt;/form&gt;
+</pre>
+</td>
+</tr>
+<tr>
+<th colspan="3"><a name="command">UICommand</a></th>
+</tr>
+<tr>
+  <td colspan="3" class="stub">
+   commandButton
+  </td>
+</tr>
+<tr>
+<td>
+<pre>&lt;h:commandButton
+   id="submit"
+   value="#{msg.buttonHeader}"
+   action="nextPage"&gt;
+&lt;/h:commandButton&gt;</pre>
+</td>
+<td class="vmiddle">
+  <input id="jsftags:submit" name="jsftags:submit" value="Next Step" type="submit">
+   
+</td>
+<td><pre>&lt;input
+      id="_id0:submit"
+      type="submit"
+      name="_id0:submit"
+      value="Next Step"/&gt;</pre>
+      </td>
+</tr>
+<tr>
+<td colspan="3" class="stub">
+commandLink
+</td>
+</tr>
+<tr>
+<td>
+<pre>&lt;h:commandLink id="link" action="goto"&gt;
+  &lt;h:outputText value="#{msg.linkName}"/&gt;
+&lt;/h:commandLink&gt;
+
+</pre>
+</td>
+<td class="vmiddle">
+  
+<a id="jsftags:link" href="#" onclick="document.forms['jsftags']['jsftags:link'].value='jsftags:link'; document.forms['jsftags'].submit(); return false;">Next Page</a>
+</td>
+<td>
+<pre>&lt;a id="_id0:link"
+href="#" onclick=
+ "document.forms['_id0']['_id0:link'].value=
+   '_id0:link';
+         document.forms['_id0'].submit();
+        return false;"&gt;Next Page&lt;/a&gt;
+</pre>
+</td>
+</tr>
+<tr>
+<th colspan="3"><a name="graphic">UIGraphic</a></th>
+</tr>
+<tr>
+<td colspan="3" class="stub">
+graphicImage
+</td>
+</tr>
+<tr>
+<td>
+<pre>&lt;h:graphicImage id="image"
+   alt="jsf-sun"
+   url="/images/jsf-sun.gif"&gt;
+&lt;/h:graphicImage&gt;                     
+</pre>
+</td>
+<td class="vmiddle">
+<img id="jsftags:image" src="jsftags-guide_arquivos/jsf-sun.gif" alt="jsf-sun">                       
+</td>
+<td>
+<pre>&lt;img id="jsftags:image"
+ src="/jsf-example/images/jsf-sun.gif"
+  alt="jsf-sun" /&gt;
+</pre>
+</td>
+</tr>
+<tr>
+<th colspan="3"><a name="input">UIInput</a></th>
+</tr>
+<tr>
+<td colspan="3" class="stub">
+inputText
+</td>
+</tr>
+<tr>
+<td>
+<pre>&lt;h:inputText id="address"
+  value="#{jsfexample.address}" /&gt;
+</pre>
+</td>
+<td class="vmiddle">
+<input id="jsftags:address" name="jsftags:address" value="" type="text">
+</td>
+<td>
+<pre>&lt;input type="text" name="jsftags:_id1"
+  value="123 JSF Ave" /&gt;
+</pre>
+</td>
+</tr>
+<tr>
+<td colspan="3" class="stub">
+inputSecret
+</td>
+</tr>
+<tr>
+<td>
+<pre>&lt;h:inputSecret redisplay="false"
+  value="#{jsfexample.password}" /&gt;
+
+</pre>
+</td>
+<td class="vmiddle">
+<input id="jsftags:password" name="jsftags:password" value="secret" type="password">
+</td>
+<td>
+<pre>&lt;input id="jsftags:password"
+   type="password"
+   name="jsftags:password"
+   value="secret" /&gt;
+</pre>
+</td>
+</tr>
+<tr>
+<td colspan="3" class="stub">
+inputHidden
+</td>
+</tr>
+<tr>
+<td class="vmiddle">
+<pre>&lt;h:inputHidden id="hidden"
+   value="userPreference" /&gt;
+</pre>
+</td>
+<td class="vmiddle">
+No Renderer 
+<input id="jsftags:hidden" name="jsftags:hidden" value="userPreference" type="hidden">
+</td>
+<td>
+<pre>&lt;input id="jsftags:hidden"
+   type="hidden"
+   name="jsftags:hidden"
+   value="userPreference" /&gt;
+</pre>
+</td>
+</tr>
+<tr>
+<td colspan="3" class="stub">
+inputTextArea
+</td>
+</tr>
+<tr>
+<td class="vmiddle">
+<pre>&lt;h:inputTextarea id="textArea"
+   rows="4" cols="7"
+   value="Text goes here.."/&gt;
+</pre>
+</td>
+<td class="vmiddle">
+<textarea id="jsftags:textArea" name="jsftags:textArea" cols="7" rows="4">Text goes here..</textarea>
+</td>
+<td>
+<pre>&lt;textarea id="jsftags:textArea"
+   name="jsftags:textArea"
+   cols="5" rows="3"&gt;
+    Text goes here..
+&lt;/textarea&gt;
+</pre>
+</td>
+</tr>
+<tr>
+<th colspan="3"><a name="output">UIOutput</a></th>
+</tr>
+<tr>
+<td colspan="3" class="stub">
+outputText
+</td>
+</tr>
+<tr>
+<td>
+<pre>&lt;h:outputText
+ value="#{jsfexample.zipCode}"/&gt;
+</pre>
+</td>
+<td class="vmiddle">
+10032
+</td>
+<td>
+<pre>10032
+</pre>
+</td>
+</tr>
+<tr>
+<td colspan="3" class="stub">
+outputLabel
+</td>
+</tr>
+<tr>
+<td>
+<pre>&lt;h:outputLabel for="address"&gt;
+  &lt;h:outputText id="addressLabel"
+    value="User Home Address"/&gt;
+&lt;/h:outputLabel&gt;
+
+</pre>
+</td>
+<td class="vmiddle">
+<label for="jsftags:address">
+  <span id="jsftags:addressLabel">User Home Address</span>
+</label>
+</td>
+<td>
+<pre>&lt;span id="jsftags:addressLabel"&gt;
+  User Home Address&lt;/span&gt;
+</pre>
+</td>
+</tr>
+<tr>
+<td colspan="3" class="stub">
+outputLink
+</td>
+</tr>
+<tr>
+<td>
+<pre>&lt;h:outputLink
+ value="#{msg['jsfstudio.home.url']"&gt;
+  &lt;f:verbatim&gt;JSF Studio&lt;/f:verbatim&gt;
+&lt;/h:outputLink&gt;
+</pre>
+</td>
+<td class="vmiddle">
+  
+<a href="http://www.jsf-studio.com/">JSF Studio</a>
+</td>
+<td>
+<pre>&lt;a href="http://www.jsf-studio.com"&gt;
+ JSF Studio
+&lt;/a&gt;
+</pre>
+</td>
+</tr>
+<tr>
+<td colspan="3" class="stub">
+outputFormat
+</td>
+</tr>
+<tr>
+<td>
+<pre>&lt;h:outputFormat
+ value="#{msg.jsfstudioThankYou}"&gt;
+  &lt;f:param value="Joe Blow"/&gt;
+  &lt;f:param id="productName"
+    value="#{msg['jsfstudio.label']}"/&gt;
+&lt;/h:outputFormat&gt; 
+</pre>
+</td>
+<td class="vmiddle">
+  
+  
+Thank you, Joe Blow, for trying Exadel JSF Studio! 
+</td>
+<td>
+<pre>Thank you, Joe Blow, for tryimg Exadel JSF Studio!
+</pre>
+</td>
+</tr>
+<tr>
+<th colspan="3"><a name="message">UIMessage and UIMessages</a></th>
+</tr>
+<tr>
+<td colspan="3" class="stub">
+message
+</td>
+</tr>
+<tr>
+<td>
+<pre>Enter address:
+&lt;h:message style="color: red"
+ for="useraddress" /&gt;
+&lt;h:inputText id="useraddress"
+ value="#{jsfexample.address}"
+  required="true"/&gt;
+&lt;h:commandButton action="save" value="Save"/&gt;
+</pre>
+</td>
+<td class="vmiddle">
+Enter address:
+<span style="color: red;">Validation Error: Value is required.</span>
+<input id="jsftags:useraddress" name="jsftags:useraddress" value="" type="text">
+<input name="jsftags:_id7" value="Save" type="submit"> 
+</td>
+<td>
+<pre>Enter address:
+&lt;span style="color: red"&gt;
+  Validation Error: Value is required.
+&lt;/span&gt;
+&lt;input id="jsftags:useraddress"
+ type="text"
+  name="jsftags:useraddress" value="" /&gt;
+&lt;input type="submit" name="jsftags:_id1"
+ value="Save" /&gt;
+</pre>
+</td>
+</tr>
+<tr>
+<th colspan="3"><a name="selectboolean">UISelectBoolean</a></th>
+</tr>
+<tr>
+<td colspan="3" class="stub">
+selectBooleanCheckbox 
+</td>
+</tr>
+<tr>
+<td>
+<pre>&lt;h:selectBooleanCheckbox
+ title="emailUpdates"
+  value="#{jsfexample.wantsEmailUpdates}" &gt;
+&lt;/h:selectBooleanCheckbox&gt;
+&lt;h:outputText
+  value="Would you like email updates?"/&gt;
+</pre>
+</td>
+<td class="vmiddle">
+<input name="jsftags:_id8" checked="checked" title="emailUpdates" type="checkbox">
+Would you like email updates?
+</td>
+<td>
+<pre>&lt;input type="checkbox"
+  name="jsftags:_id6" checked
+    title="emailUpdates" /&gt;
+Would you like email updates?
+</pre>
+</td>
+</tr>
+<tr>
+<th colspan="3"><a name="selectmany">UISelectMany</a></th>
+</tr>
+<tr>
+<td colspan="3" class="stub">
+selectManyCheckboxlist
+</td>
+</tr>
+<tr>
+<td class="vmiddle">
+<pre>&lt;h:selectManyCheckbox id="cars"
+ value="#{carsBean.car}"&gt;
+  &lt;f:selectItems
+   value="#{carBean.carList}"/&gt;
+&lt;/h:selectManyCheckbox&gt;
+</pre>
+</td>
+<td class="vmiddle">
+        
+  <span id="jsftags:cars"><table>
+<tbody><tr>
+<td>
+<label for="jsftags:cars"><input name="jsftags:cars" value="accord" type="checkbox"> Honda Accord</label></td>
+<td>
+<label for="jsftags:cars"><input name="jsftags:cars" value="4runner" type="checkbox"> Toyota 4Runner</label></td>
+<td>
+<label for="jsftags:cars"><input name="jsftags:cars" value="nissan-z" type="checkbox"> Nissan Z350</label></td>
+</tr>
+</tbody></table></span> 
+</td>
+<td>
+<pre>&lt;span id="jsftags:cars"&gt;
+&lt;table&gt;
+ &lt;tr&gt;
+ &lt;td&gt;&lt;label for="jsftags:cars"&gt;
+   &lt;input name="jsftags:cars"
+     value="accord" type="checkbox"&gt;
+    Honda Accord&lt;/input&gt;
+   &lt;/label&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;label for="jsftags:cars"&gt;
+   &lt;input name="jsftags:cars"
+     value="4runner" type="checkbox"&gt;
+    Toyota 4Runner&lt;/input&gt;
+    &lt;/label&gt;&lt;/td&gt;
+ &lt;td&gt;&lt;label for="jsftags:cars"&gt;
+   &lt;input name="jsftags:cars"
+     value="nissan-z" type="checkbox"&gt;
+    Nissan Z350&lt;/input&lt;
+   &lt;/label&gt;&lt;/td&gt;
+ &lt;/tr&gt;
+&lt;/table&gt;
+&lt;/span&gt; 
+</pre>
+</td>
+</tr>
+<tr>
+<td colspan="3" class="stub">selectManyMenu</td>
+</tr>
+<tr>
+<td>
+<pre>&lt;h:selectManyMenu
+ id="cars_selectManyMenu"
+  value="#{carBean.car}"&gt;
+   &lt;f:selectItems
+    value="#{carBean.carList}"/&gt;
+&lt;/h:selectManyMenu&gt;
+</pre>
+</td>
+<td class="vmiddle">
+        
+  <select id="jsftags:cars_selectManyMenu" name="jsftags:cars_selectManyMenu" multiple="multiple" size="1">	<option value="accord">Honda Accord</option>
+<option value="4runner">Toyota 4Runner</option>
+<option value="nissan-z">Nissan Z350</option>
+</select> 
+</td>
+<td>
+<pre>&lt;select id="jsftags:cars_selectManyMenu"
+ name="jsftags:cars_selectManyMenu"
+  multiple size="1"&gt;
+  &lt;option value="accord"&gt;Honda Accord&lt;/option&gt;
+  &lt;option value="4runner"&gt;Toyota 4Runner&lt;/option&gt;
+  &lt;option value="nissan-z"&gt;Nissan Z350&lt;/option&gt;
+&lt;/select&gt;
+</pre>
+</td>
+</tr>
+<tr>
+<td colspan="3" class="stub">
+selectManyListbox
+</td>
+</tr>
+<tr>
+<td>
+<pre>&lt;h:selectManyListbox
+ id="cars_selectManyListbox"
+  value="#{carBean.car}"&gt;
+   &lt;f:selectItems
+    value="#{carBean.carList}"/&gt;
+&lt;/h:selectManyListbox&gt;
+</pre>
+</td>
+<td class="vmiddle">
+        
+  <select id="jsftags:cars_selectManyListbox" name="jsftags:cars_selectManyListbox" multiple="multiple" size="3">	<option value="accord">Honda Accord</option>
+<option value="4runner">Toyota 4Runner</option>
+<option value="nissan-z">Nissan Z350</option>
+</select> 
+</td>
+
+<td>
+<pre>&lt;select id="jsftags:cars_selectManyListbox"
+ name="jsftags:cars_selectManyListbox"
+  multiple size="3"&gt;
+   &lt;option value="accord"&gt;Honda Accord&lt;/option&gt;
+   &lt;option value="4runner"&gt;Toyota 4Runner&lt;/option&gt;
+   &lt;option value="nissan-z"&gt;Nissan Z350&lt;/option&gt;
+&lt;/select&gt;
+</pre>
+</td>
+</tr>
+<tr>
+<th colspan="3"><a name="selectone">UISelectOne</a></th>
+</tr>
+<tr>
+<td colspan="3" class="stub">
+selectOneRadio
+</td>
+</tr>
+<tr>
+<td class="vmiddle">
+<pre>&lt;h:selectOneRadio
+ value="#{carBean.currentCar}"&gt;
+  &lt;f:selectItems
+   value="#{carBean.carList}" /&gt;
+&lt;/h:selectOneRadio&gt;
+</pre>
+</td>
+<td class="vmiddle">
+  
+<table>
+<tbody><tr>
+<td>
+<label for="jsftags:_id13"><input name="jsftags:_id13" value="accord" type="radio"> Honda Accord</label></td>
+<td>
+<label for="jsftags:_id13"><input name="jsftags:_id13" value="4runner" type="radio"> Toyota 4Runner</label></td>
+<td>
+<label for="jsftags:_id13"><input name="jsftags:_id13" value="nissan-z" type="radio"> Nissan Z350</label></td>
+</tr>
+</tbody></table> 
+</td>
+<td>
+<pre>&lt;table&gt;&lt;tr&gt;
+ &lt;td&gt;
+  &lt;label for="jsftags:_id9"&gt;
+   &lt;input type="radio"
+    name="jsftags:_id9" value="accord"&gt;
+      Honda Accord
+     &lt;/input&gt;&lt;/label&gt;
+ &lt;/td&gt;
+ &lt;td&gt;
+  &lt;label for="jsftags:_id9"&gt;
+   &lt;input type="radio"
+    name="jsftags:_id9" value="4runner"&gt;
+      Toyota 4Runner
+     &lt;/input&gt;&lt;/label&gt;
+ &lt;/td&gt;
+ &lt;td&gt;
+  &lt;label for="jsftags:_id9"&gt;
+   &lt;input type="radio"
+    name="jsftags:_id9" value="nissan-z"&gt;
+      Nissan Z350
+     &lt;/input&gt;/label&gt;
+ &lt;/td&gt;
+&lt;/tr&gt;&lt;/table&gt; 
+</pre>
+</td>
+</tr>
+<tr>
+<td colspan="3" class="stub">
+selectOneMenu
+</td>
+</tr>
+<tr>
+<td class="vmiddle">
+<pre>&lt;h:selectOneMenu id="selectCar"
+ value="#{carBean.currentCar}"&gt;
+  &lt;f:selectItems
+   value="#{carBean.carList}" /&gt;
+&lt;/h:selectOneMenu&gt; 
+
+</pre>
+</td>
+<td class="vmiddle">
+  
+<select id="jsftags:selectCar" name="jsftags:selectCar" size="1">	<option value="accord">Honda Accord</option>
+<option value="4runner">Toyota 4Runner</option>
+<option value="nissan-z">Nissan Z350</option>
+</select> 
+</td>
+<td>
+<pre>&lt;select id="jsftags:selectCar"
+ name="jsftags:selectCar" size="1"&gt;
+  &lt;option value="accord"&gt;Honda Accord&lt;/option&gt;
+  &lt;option value="4runner"&gt;Toyota 4Runner&lt;/option&gt;
+  &lt;option value="nissan-z"&gt;Nissan Z350&lt;/option&gt;
+&lt;/select&gt; 
+</pre>
+</td>
+</tr>
+<tr>
+<td colspan="3" class="stub">
+selectOneListbox
+</td>
+</tr>
+<tr>
+<td class="vmiddle">
+<pre>&lt;h:selectOneListbox id="pickCar"
+ value="#{carBean.currentCar}"&gt;
+  &lt;f:selectItems
+   value="#{carBean.carList}" /&gt;
+&lt;/h:selectOneListbox&gt; 
+
+</pre>
+</td>
+<td class="vmiddle">
+  
+<select id="jsftags:pickCar" name="jsftags:pickCar" size="3">	<option value="accord">Honda Accord</option>
+<option value="4runner">Toyota 4Runner</option>
+<option value="nissan-z">Nissan Z350</option>
+</select> 
+</td>
+<td>
+<pre>&lt;select id="jsftags:pickCar"
+ name="jsftags:selectCar" size="3"&gt;
+  &lt;option value="accord"&gt;Honda Accord&lt;/option&gt;
+  &lt;option value="4runner"&gt;Toyota 4Runner&lt;/option&gt;
+  &lt;option value="nissan-z"&gt;Nissan Z350&lt;/option&gt;
+&lt;/select&gt; 
+
+</pre>
+</td>
+</tr>
+<tr>
+<th colspan="3"><a name="panel">UIPanel</a></th>
+</tr>
+<tr>
+<td colspan="3" class="stub">
+Grid and Group
+</td>
+</tr>
+<tr>
+<td>
+<pre>&lt;h:panelGrid columns="4" footerClass="subtitle" 
+  headerClass="subtitlebig" styleClass="medium" 
+  columnClasses="subtitle,medium"&gt;
+  &lt;f:facet name="header"&gt;
+    &lt;h:outputText value="Table with numbers"/&gt;
+  &lt;/f:facet&gt;
+  &lt;h:outputText value="1" /&gt;
+  &lt;h:outputText value="2" /&gt;
+  &lt;h:outputText value="3" /&gt;
+  &lt;h:outputText value="4" /&gt;
+  &lt;h:outputText value="5" /&gt;
+  &lt;h:outputText value="6" /&gt;
+  &lt;h:outputText value="7" /&gt;
+  &lt;f:facet name="footer"&gt;
+    &lt;h:panelGroup&gt;
+      &lt;h:outputText value="one row"  /&gt;
+      &lt;h:outputText value=" "  /&gt;
+      &lt;h:outputText
+       value="grouped with panelGroup" /&gt;
+    &lt;/h:panelGroup&gt;
+  &lt;/f:facet&gt;
+&lt;/h:panelGrid&gt; 
+</pre>
+</td>
+<td class="vmiddle">
+  
+    
+  
+  
+  
+  
+  
+  
+  
+  
+  
+    
+      
+      
+      
+    
+  
+<table class="medium">
+<thead>
+<tr><th class="subtitlebig" colspan="4" scope="colgroup">Table with numbers</th></tr>
+</thead>
+<tfoot>
+<tr><td class="subtitle" colspan="4">one row grouped with panelGroup</td></tr>
+</tfoot>
+<tbody>
+<tr>
+<td class="subtitle">1</td>
+<td class="medium">2</td>
+<td class="subtitle">3</td>
+<td class="medium">4</td>
+</tr>
+<tr>
+<td class="subtitle">5</td>
+<td class="medium">6</td>
+<td class="subtitle">7</td>
+</tr>
+</tbody>
+</table>
+ 
+</td>
+<td>
+<pre>&lt;table class="medium"&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;&lt;th class="subtitlebig" colspan="4"
+   scope="colgroup"&gt;Table with numbers&lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tfoot&gt;
+  &lt;tr&gt;&lt;td class="subtitle"
+   colspan="4"&gt;
+    one row grouped with panelGroup
+    &lt;/td&gt;
+  &lt;/tr&gt;
+ &lt;/tfoot&gt;
+ &lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td class="subtitle"&gt;1&lt;/td&gt;
+   &lt;td class="medium"&gt;2&lt;/td&gt;
+   &lt;td class="subtitle"&gt;3&lt;/td&gt;
+   &lt;td class="medium"&gt;4&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td class="subtitle"&gt;5&lt;/td&gt;
+   &lt;td class="medium"&gt;6&lt;/td&gt;
+   &lt;td class="subtitle"&gt;7&lt;/td&gt;
+   &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+
+</pre>
+</td>
+</tr>
+<tr>
+<th colspan="3"><a name="column">UIColumn and UIData</a></th>
+</tr>
+<tr>
+<td colspan="3" class="stub">
+dataTable and column
+</td>
+</tr>
+<tr>
+<td>
+<pre>&lt;h:dataTable id="books"
+ columnClasses="list-column-center,
+  list-column-right, list-column-center,
+list-column-right" headerClass="list-header"
+ rowClasses="list-row" styleClass="list-
+background" value="#{BookStore.items}" var="store"&gt;   
+  &lt;h:column&gt;
+    &lt;f:facet name="header"&gt;
+      &lt;h:outputText  value="#{msg.storeNameLabel}"/&gt;
+    &lt;/f:facet&gt;
+     &lt;h:outputText value="#{store.name}"/&gt;
+  &lt;/h:column&gt;
+  &lt;h:column&gt;
+    &lt;f:facet name="header"&gt;
+     &lt;Subject
+    &lt;/f:facet&gt;
+     &lt;h:outputText value="#{store.subject}"/&gt;
+  &lt;/h:column&gt;
+  &lt;h:column&gt;
+    &lt;f:facet name="header"&gt;
+      &lt;h:outputText  value="#{msg.storePriceLabel}"/&gt;
+    &lt;/f:facet&gt;
+     &lt;h:outputText value="#{store.price}"/&gt;
+  &lt;/h:column&gt;
+&lt;/h:dataTable&gt; 
+</pre>
+</td>
+<td class="vmiddle">
+   
+  
+    
+      
+    
+     
+  
+  
+    
+      
+    
+     
+  
+  
+    
+      
+    
+     
+  
+<table id="jsftags:table" class="list- background">
+<thead>
+<tr>
+<th class="list-header" scope="col">Title</th>
+<th class="list-header" scope="col">Subject</th>
+<th class="list-header" scope="col">Price ($)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="list-row">
+<td class="list-column-center">JSF For Dummies</td>
+<td class="list-column-right">JSF</td>
+<td class="list-column-center">25.0</td>
+</tr>
+<tr class="list-row">
+<td class="list-column-center">Struts For Dummies</td>
+<td class="list-column-right">Struts</td>
+<td class="list-column-center">22.95</td>
+</tr>
+</tbody>
+</table>
+ 
+</td>
+<td>
+<pre>&lt;table id="jsftags:books"
+ class="list-background"&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th class="list-header"
+    scope="col"&gt;Title&lt;/th&gt;
+   &lt;th class="list-header"
+    scope="col"&gt;Subject&lt;/th&gt;
+   &lt;th class="list-header"
+    scope="col"&gt;Price ($)&lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+  &lt;tr class="list-row"&gt;
+   &lt;td class="list-column-center"&gt;
+    JSF For Dummies&lt;/td&gt;
+   &lt;td class="list-column-right"&gt;
+    JSF&lt;/td&gt;
+   &lt;td class="list-column-center"&gt;
+    25.0&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr class="list-row"&gt;
+   &lt;td class="list-column-center"&gt;
+    Struts For Dummies&lt;/td&gt;
+   &lt;td class="list-column-right"&gt;
+    Struts&lt;/td&gt;
+   &lt;td class="list-column-center"&gt;
+    22.95&lt;/td&gt;
+  &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+</pre>
+</td>
+</tr>
+<tr><th colspan="3"><a name="selectitems">UISelectItems</a></th></tr>
+<tr><td colspan="3" class="stub">selectItems</td></tr>
+<tr>
+<td class="vmiddle">
+<pre>&lt;h:selectOneMenu id="selectOneCar"
+ value="#{carBean.currentCar}"&gt;
+  &lt;f:selectItems
+   value="#{carBean.carList}" /&gt;
+&lt;/h:selectOneMenu&gt; 
+</pre>
+</td>
+<td class="vmiddle">
+  
+<select id="jsftags:selectOneCar" name="jsftags:selectOneCar" size="1">	<option value="accord">Honda Accord</option>
+<option value="4runner">Toyota 4Runner</option>
+<option value="nissan-z">Nissan Z350</option>
+</select> 
+</td>
+<td>
+<pre>&lt;select id="jsftags:selectOneCar"
+ name="jsftags:selectCar" size="1"&gt;
+  &lt;option value="accord"&gt;Honda Accord&lt;/option&gt;
+  &lt;option value="4runner"&gt;Toyota 4Runner&lt;/option&gt;
+  &lt;option value="nissan-z"&gt;Nissan Z350&lt;/option&gt;
+&lt;/select&gt; 
+</pre>
+</td>
+</tr>
+<tr><th colspan="3"><a name="selectitem">UISelectItem</a></th></tr>
+<tr><td colspan="3" class="stub">selectItem</td></tr>
+<tr>
+<td>
+<pre>&lt;h:outputText value="Select car color:" /&gt;
+&lt;h:selectOneMenu id="chooseCarColor"
+  value="apple"&gt;
+  &lt;f:selectItem
+    itemValue="red" itemLabel="Red"/&gt;
+  &lt;f:selectItem 
+    itemValue="blue" itemLabel="Blue"/&gt;
+  &lt;f:selectItem 
+    itemValue="black" itemLabel="Black"/&gt;
+  &lt;f:selectItem 
+    itemValue="green" itemLabel="Green"/&gt;
+  &lt;f:selectItem 
+    itemValue="white" itemLabel="White"/&gt;
+&lt;/h:selectOneMenu&gt; 
+</pre>
+</td>
+<td class="vmiddle">
+Select car color:
+  
+  
+  
+  
+  
+<select id="jsftags:chooseCarColor" name="jsftags:chooseCarColor" size="1">	<option value="red">Red</option>
+<option value="blue">Blue</option>
+<option value="black">Black</option>
+<option value="green">Green</option>
+<option value="white">White</option>
+</select> 
+</td>
+<td class="vmiddle"> 
+<pre>
+Select car color:
+&lt;select id="jsftags:chooseCarColor"
+ name="jsftags:chooseCarColor" size="1"&gt;
+  &lt;option value="red"&gt;Red&lt;/option&gt;
+  &lt;option value="blue"&gt;Blue&lt;/option&gt;
+  &lt;option value="black"&gt;Black&lt;/option&gt;
+  &lt;option value="green"&gt;Green&lt;/option&gt;
+  &lt;option value="white"&gt;White&lt;/option&gt;
+&lt;/select&gt;
+</pre>
+</td>
+</tr>
+</tbody></table>
+<a name="run">
+<!-- -------------------------------- End JSF Tags -------------------------------------->
+<!-- ------------------------------------------------------------------------------------>
+</a><h2><a name="run">Running This Reference As an Application</a></h2>
+<p>
+<a name="run">    If you would like to run this references as a Web application, download and deploy </a><a href="http://www.exadel.com/tutorial/jsf/misc/jsftags-guide.jar">jsftags-guide.jar</a>
+. The application contains all the tag examples that you see on this
+page. It's ready to run. It just needs to be deployed. (Also, the
+project includes an Ant build script in case you want to rebuild the
+project.)</p>
+<p>Once you have downloaded the Jar file, only a few steps are required. Unzip
+    it by typing: 
+</p><pre>jar -xvf jsftags-guide.jar</pre>
+Then add this context to Tomcat server:
+<pre>&lt;Context debug="0"
+  docBase="Path_to_WebContent"
+    path="/jsftags-guide" reloadable="true"/&gt;
+</pre>
+where <code>Path_to_WebContent</code> is the path on your system to the <code>WebContent</code> folder in the <code>jsftags-guide</code> folder. Finally, start
+Tomcat and type this in your web browser:
+<pre>http://localhost:8080/jsftags-guide</pre>
+<p></p>
+    
+<h3>JSF Template Also Available</h3>
+<p>We have also included a blank project template for starting your own JSF projects. To use it, download <a href="http://www.exadel.com/tutorial/jsf/misc/jsf-blank.jar">jsf-blank.jar</a>
+. Unzip it as above and you will be ready to start developing your own
+JSF applications. Don't forget to deploy your applications before
+running.</p>
+<hr>
+<!-- <form name="feedback" action="http://box.exadel.com/goto/tutorialfeedback.jsp" method="post"><center><table class="header"><tr><th>what do you think of this JSF guide?</th></tr><tr><td><input value="5" name="score" type="radio">Excellent! (5)<input value="4" name="score" type="radio">Nice job (4)<input value="3" name="score" type="radio">Just OK (3)<input value="2" name="score" type="radio">Not so good (2)<input value="1" name="score" type="radio">Worthless! (1)</td></tr><tr><th>what other JSF materials would you like to see?</th></tr><tr> <td>  <input type="text" name="question1" value="" size="70"> </td></tr><tr><th>comments?</th></tr><tr><td><textarea cols="55" rows="6" wrap="virtual" name="comments">
+</textarea></td></tr><tr><td><input type="submit" value=" Submit Feedback "></td></tr></table></center><input type="hidden" name="page" value="jsf-guide"/></form> -->
+<p class="footer">
+<br>
+<a href="http://www.exadel.com/">Exadel, Inc.</a> Copyright 2004
+</p>
+<!-- BEGIN WEBSIDESTORY CODE v3.0.0 (pro)-->
+<!-- COPYRIGHT 1997-2003 WEBSIDESTORY, INC. ALL RIGHTS RESERVED. U.S.PATENT No. 6,393,479 B1. Privacy notice at: http://websidestory.com/privacy -->
+<script language="javascript">
+var _pn=""; 	//page name(s)
+var __loc = document.location.href;
+var pos = __loc.lastIndexOf('/');
+_pn = (_pn==""?  __loc.substring(pos):_pn);
+var _mlc="";	//multi-level content category
+var _cp="null"; 	//campaign
+var _acct="WR55021701ED94EN3"; 	//account number(s)
+var _pndef="title";	//default page name
+var _ctdef="full"; 	//default content category
+var _prc="";	//commerce price
+var _oid="";	//commerce order
+var _dlf="";	//download filter
+var _elf="";	//exit link filter
+var _epg=""; 	//event page identifier
+var _mn="wp189"; //machine name
+var _gn="phg.hitbox.com"; //gateway name
+var _hcv=68;function _wn(n){return((n.indexOf("NAME")>0&&n.indexOf("PUT")>-1)||
+(n.indexOf("CONTENT")>-1&&n.indexOf("CATEGORY")>0))};function _gd(x,w){var _ed=
+x.lastIndexOf("/");var _be=(w!="full")?x.lastIndexOf("/",_ed-2):x.indexOf("/");
+return(_be==_ed)?"/":x.substring(_be,_ed);};function _gf(x){return x.substring(
+x.lastIndexOf("/")+1,x.length);};var _hl=location;var _lp=_hl.protocol.indexOf(
+'https')>-1?'https://':'http://';var _zo=(new Date()).getTimezoneOffset();
+function _ps(_ip,_pml){return(_ip&&_wn(_pml))?((_pndef=="title"&&
+document.title!="")?document.title:_gf(_hl.pathname)?_gf(_hl.pathname):_pndef):
+(_wn(_pml)?_gd(_hl.pathname,_ctdef):_pml)};function _pm(m,_fml,h){if(m.indexOf(
+";")!=-1){_nml=m.substring(0,m.indexOf(";"));_rm=m.substring(m.indexOf(";")+1,
+m.length);_fml+=_ps(h,_nml)+";";return _pm(_rm,_fml,h);}else{return _fml+_ps(h,
+m);}};var _sv=10;var _hn=navigator;var _bn=_hn.appName;if(_bn.substring(0,9)==
+"Microsoft"){_bn="MSIE";};var _bv=(Math.round(parseFloat(_hn.appVersion)*100));
+if((_bn=="MSIE")&&(parseInt(_bv)==2))_bv=301;function _ex(v){return escape(v)};
+var _rf=_ex(document.referrer);_mlc=_pm(_mlc,"",0);_pn=_pm(_pn,"",1);</script>
+<script language="javascript1.1">_sv=11</script><script language="javascript1.1" src="jsftags-guide_arquivos/hbp.js" defer="defer"></script><script language="javascript">if(_sv<11){if(document.cookie.indexOf("CP=")>-1){_ce="y";}
+else{document.cookie="CP=null*; path=/; expires=Wed, 1 Jan 2020 00:00:00 GMT";
+_ce=(document.cookie.indexOf("CP=")!=-1)?"y":"n";};if((_rf=="undefined")||
+(_rf=="")){_rf="bookmark";};_x2="<img src='"+_lp+_gn+"/HG?hc="+_mn+"&hb="+
+_ex(_acct)+"&n="+_ex(_pn);_x3="&cd=1&hv=6' border=0 height=1 width=1>";_ar=
+"&bn="+_ex(_bn)+"&bv="+_bv+"&ce="+_ce+"&ss=na&sc=na&ja=na&sv="+_sv+"&con="+
+_ex(_mlc)+"&vcon="+_ex(_mlc)+"&epg="+_epg+"&hp=u&cy=u&dt=&ln=na&cp="+_ex(_cp)+
+"&pl=&prc="+_ex(_prc)+"&oid="+_ex(_oid)+"&rf="+_rf;document.write(_x2+_ar+_x3);}
+if(_bn!='Netscape'&&_bv>399)document.write("<\!"+"--");</script><!--//-->
+<!-- END WEBSIDESTORY CODE  -->
+</body></html>
