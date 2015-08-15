@@ -23,13 +23,13 @@ DROP TABLE compra;
 DROP TABLE item;
 
 CREATE TABLE carrinho (
-	idCarrinho INT NOT NULL,
+	idCarrinho INT NOT NULL AUTO_INCREMENT,
 	sessao VARCHAR(256) NOT NULL,
 	PRIMARY KEY (idCarrinho)
 ) ENGINE=InnoDB;
 
 CREATE TABLE produto (
-	idProduto INT NOT NULL,
+	idProduto INT NOT NULL AUTO_INCREMENT,
 	codigo VARCHAR(3) NOT NULL,
 	descricao VARCHAR(80) NOT NULL,
 	valor FLOAT NOT NULL,
@@ -40,7 +40,7 @@ CREATE TABLE produto (
 ) ENGINE=InnoDB;
 
 CREATE TABLE itemdecompra (
-	iditemDeCompra INT NOT NULL,
+	iditemDeCompra INT NOT NULL AUTO_INCREMENT,
 	codigo VARCHAR(3) NOT NULL,
 	nome VARCHAR(40) NOT NULL,
 	descricao VARCHAR(80) NOT NULL,
@@ -52,7 +52,7 @@ CREATE TABLE itemdecompra (
 ) ENGINE=InnoDB;
 
 CREATE TABLE compra (
-	idCompra INT NOT NULL,
+	idCompra INT NOT NULL AUTO_INCREMENT,
 	nome VARCHAR(40) NOT NULL,
 	tipo VARCHAR(1) NOT NULL,
 	cartao VARCHAR(15) NOT NULL,
@@ -62,7 +62,7 @@ CREATE TABLE compra (
 ) ENGINE=InnoDB;
 
 CREATE TABLE item (
-	idItem INT NOT NULL,
+	idItem INT NOT NULL AUTO_INCREMENT,
 	codigo VARCHAR(3) NOT NULL,
 	descricao VARCHAR(80) NOT NULL,
 	valor FLOAT NOT NULL,
