@@ -1,0 +1,59 @@
+ <!DOCTYPE  html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+ <html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:a4j="http://richfaces.org/a4j"
+	xmlns:rich="http://richfaces.org/rich">
+ <ui:composition template="base.xhtml">
+	<ui:define name="conteudo">
+		<h:form id="form">
+			<rich:panel styleClass="fieldSet">
+				<h:panelGrid columns="3">
+					<h:outputLabel value="Nome" />
+					<h:inputText value="#{cadastro.nome}" id="nome">
+						<rich:validator />
+					</h:inputText>
+					<rich:message for="nome" />
+				</h:panelGrid>
+				<p>
+					<h:commandButton value="Enviar" action="#{cadastro.salvar()}" />
+				</p>
+			</rich:panel>
+		</h:form>
+		<h:form>
+			<rich:panel styleClass="fieldSet">
+			
+				<rich:dataTable value="#{listaCadastro.nomes}" var="nome"
+					rowClasses="odd-row, even-row" id="tabela" rows="6">
+					<f:facet name="noData">Não existe(m) Nome(s) cadastrado(s), selecione o botão + para cadastrar Nomes</f:facet>
+
+					<rich:column>
+						<f:facet name="header">
+							<h:outputText value="Del"></h:outputText>
+						</f:facet>
+						<h:selectBooleanCheckbox value="#{nome.del}" />
+					</rich:column>
+					<rich:column>
+						<f:facet name="header">
+							<h:outputText value="Nomes Cadastrados"></h:outputText>
+						</f:facet>
+						<h:outputText value="#{nome.nome}" />
+					</rich:column>
+
+					<f:facet name="footer">
+						<rich:dataScroller />
+					</f:facet>
+				</rich:dataTable>
+				<h:commandButton value="Apagar os Nomes Selecionados"
+					action="#{listaCadastro.apaga()}"
+					rendered="#{listaCadastro.quantidade() > 0}" />
+					
+			</rich:panel>
+		</h:form>
+	</ui:define>
+ </ui:composition>
+ </html>
+ 
+ 
