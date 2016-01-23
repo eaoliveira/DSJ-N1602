@@ -1,6 +1,0 @@
-<!ELEMENT collection (produto*) >
-<!ELEMENT produto (id, nome, descricao, preco) >
-<!ELEMENT id (#PCDATA) >
-<!ELEMENT nome (#PCDATA) >
-<!ELEMENT descricao (#PCDATA) >
-<!ELEMENT preco (#PCDATA) >

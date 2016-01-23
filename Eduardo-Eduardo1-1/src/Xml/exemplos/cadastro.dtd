@@ -1,6 +1,0 @@
-<!ELEMENT cadastro (cliente+) >
-<!ELEMENT cliente (nome, email) >
-<!ATTLIST cliente codigo NMTOKEN #IMPLIED >
-<!ELEMENT nome (#PCDATA) >
-<!ATTLIST nome idade  NMTOKEN #REQUIRED >
-<!ELEMENT email (#PCDATA) >

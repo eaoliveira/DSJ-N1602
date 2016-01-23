@@ -1,5 +1,0 @@
-grant {  
-  permission java.net.SocketPermission  "*:1098-", "connect, resolve";
-  permission java.awt.AWTPermission  "accessEventQueue";
-  permission java.lang.RuntimePermission "createSecurityManager";
- };

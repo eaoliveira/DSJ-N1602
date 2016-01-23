@@ -1,8 +1,0 @@
-<!ELEMENT pessoas (pessoa+)>
-<!ELEMENT pessoa (nome, profissao*, hobby)>
-<!ATTLIST pessoa idade CDATA #REQUIRED>
-<!ELEMENT nome (prenome, sobrenome)>
-<!ELEMENT prenome (#PCDATA)>
-<!ELEMENT sobrenome (#PCDATA)>
-<!ELEMENT profissao (#PCDATA)>
-<!ELEMENT hobby (#PCDATA)>

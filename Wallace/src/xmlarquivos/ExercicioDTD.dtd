@@ -1,9 +1,0 @@
-<!ELEMENT informacoes (contato+) >
-<!ELEMENT contato (nome, telefone, nomedepart, nomeempresa) >
-<!ELEMENT nome (#PCDATA) >
-<!ELEMENT telefone EMPTY >
-<!ATTLIST telefone ddd NMTOKEN #REQUIRED >
-<!ATTLIST telefone numero NMTOKEN #REQUIRED >
-<!ATTLIST telefone ramal NMTOKEN #IMPLIED >
-<!ELEMENT nomedepart (#PCDATA) >
-<!ELEMENT nomeempresa (#PCDATA) >
