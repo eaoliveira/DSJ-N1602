@@ -125,6 +125,7 @@ public class AcessoHtml extends JFrame implements ActionListener {
 		setLocationRelativeTo(null);
 	}
 	
+	// Valida o endereço de acesso à informação
 	protected void validaURL(String textURL) throws MalformedURLException {
 		URL url = new URL(textURL);
 		host = url.getHost();
@@ -138,15 +139,21 @@ public class AcessoHtml extends JFrame implements ActionListener {
 
 	protected Socket connect() throws IOException {
 		status.setText("Conectando a " + host + ":" + port + "..");
+		// Conecta ao servidar na porta informada
 		Socket socket = new Socket(host, port);
 		status.setText("Conectado.");
 
+		// obtem os canais ne leitura e gravação
 		OutputStream rawOut = socket.getOutputStream();
 		InputStream rawIn = socket.getInputStream();
 		
+		// configurando uma área para armazenamento temporário dos
+		// dados de saída
 		BufferedOutputStream buffOut = new BufferedOutputStream(rawOut);
-		
 		out = new DataOutputStream(buffOut);
+		
+		// configurando uma área para armazenamento temporário dos
+		// dados de entrada
 		in = new BufferedReader(new InputStreamReader(rawIn));
 
 		return socket;
@@ -155,7 +162,7 @@ public class AcessoHtml extends JFrame implements ActionListener {
 	protected void acessa() throws IOException {
 		status.setText("Enviando a requisição..");
 
-		out.writeBytes("GET " + file + " HTTP/1.1\r\n\r\n");
+		out.writeBytes("GET " + file + " HTTP/1.0\r\n\r\n");
 		out.flush();
 
 		status.setText("Aguardando pela resposta..");
