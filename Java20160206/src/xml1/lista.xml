@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="navegador.xsl"?>
+<!DOCTYPE listaContatos SYSTEM "validaLista.dtd">
+<listaContatos>
+	<pessoa>	
+		<nome>Jose</nome>
+		<ddd>11</ddd>
+		<numero>11111111</numero>
+		<ramal>01</ramal>
+		<dpto>Adm</dpto>
+		<empresa>Senai</empresa>
+	</pessoa>
+	<pessoa>
+		<nome>Luiz</nome>
+		<ddd>22</ddd>
+		<numero>2222222</numero>
+		<dpto>Adm2</dpto>
+		<empresa>Senai2</empresa>
+	</pessoa>
+	<pessoa>
+		<nome>Junior</nome>
+		<ddd>13</ddd>
+		<numero>33333333</numero>
+		<ramal>03</ramal>
+		<dpto>Adm3</dpto>
+		<empresa>Senai3</empresa>
+	</pessoa>
+</listaContatos>

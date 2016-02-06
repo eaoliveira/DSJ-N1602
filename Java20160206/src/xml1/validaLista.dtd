@@ -1,0 +1,8 @@
+<!ELEMENT listaContatos (pessoa*)>
+<!ELEMENT pessoa (nome, ddd, numero,ramal?,dpto,empresa)>
+<!ELEMENT nome (#PCDATA) >
+<!ELEMENT ddd (#PCDATA)>
+<!ELEMENT numero (#PCDATA)>
+<!ELEMENT ramal (#PCDATA)>
+<!ELEMENT dpto (#PCDATA)>
+<!ELEMENT empresa (#PCDATA)>
