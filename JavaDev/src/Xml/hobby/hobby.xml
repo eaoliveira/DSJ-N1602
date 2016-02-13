@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
-<?xml-stylesheet type="text/xsl" href="hobby2.xsl"?>
+<?xml-stylesheet type="text/xsl" href="http://10.84.144.250/java/hobby2.xsl"?>
 <!-- DOCTYPE pessoas SYSTEM "hobby.dtd" -->
 <pessoas>
 	<pessoa idade="20">
