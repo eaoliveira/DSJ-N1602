@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript" src="scripts/script.js"></script>
+<script type="text/javascript" src="scripts/jQuery1.7.2.js"></script>
+<link rel="stylesheet" type="text/css" href="styles/style.css" />
+<title>Cadastro de Nomes</title>
+</head>
+<body onload="todos()">
+	<h3>Cadastro de Nomes</h3>
+	<form name="form1">
+		<fieldset>
+			<div>
+				<label for='nome'>Nome</label>
+				<input type="text" size="10" name="nome">
+			</div><div>
+				<label for='idade'>Idade</label>
+				<input type="text" size="5" name="idade">
+			</div><div>
+				<input type="button" value="Salvar" onclick="salva()">
+			</div>
+		</fieldset>
+	</form><br/>
+	<div id="zone"></div>
+	<script type="text/javascript">
+		setInterval(function() {
+			todos();
+		}, 5000);
+	</script>
+</body>
+</html>
