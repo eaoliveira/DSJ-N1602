@@ -1,0 +1,22 @@
+Apresenta a lista de compatibilidade de CCS3 (Estilos HTML) para
+vários navegadores
+
+http://caniuse.com 
+
+-------------------------------------------------------------------
+
+Site para Download de Fonts para utilização em páginas Web
+
+http://www.fontsquirrel.com
+
+-------------------------------------------------------------------
+
+Site para conversão de formato de Fonts
+
+https://everythingfonts.com/otf-to-eot
+
+-------------------------------------------------------------------
+
+Site com padrões de Background para utilizar em páginas HTML5
+
+http://lea.verou.me/css3patterns/
