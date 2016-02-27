@@ -20,3 +20,9 @@ https://everythingfonts.com/otf-to-eot
 Site com padrões de Background para utilizar em páginas HTML5
 
 http://lea.verou.me/css3patterns/
+
+-------------------------------------------------------------------
+
+Site que apresenta os códigos Unicode para Símbolos utilizados em páginas Web
+
+http://unicode-table.com/en/sets/stars-symbols/
