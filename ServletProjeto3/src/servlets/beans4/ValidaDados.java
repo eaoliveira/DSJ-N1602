@@ -27,10 +27,10 @@ public class ValidaDados extends javax.servlet.http.HttpServlet implements
     PrintWriter out = response.getWriter();
     
     if(nome.isEmpty() || idade.isEmpty()) {
-    	header.replaceFirst("TITULO", "Erro");
+    	header = header.replaceFirst("TITULO", "Erro");
     	out.print(header +"<p>Alguns dados não foram informados</p>" + footer);
     } else {
-    	header.replaceFirst("TITULO", "Dados Digitados");
+    	header = header.replaceFirst("TITULO", "Dados Digitados");
     	out.print(header +
     	  "<p><b>Nome</b>: " + nome + "</p>\n" +
           "<p><b>Idade</b>: " + idade + "</p>\n" +
