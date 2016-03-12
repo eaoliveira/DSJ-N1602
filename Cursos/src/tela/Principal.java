@@ -1,6 +1,7 @@
 package tela;
 
 import java.io.IOException;
+import java.util.List;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -8,8 +9,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import bean.Cursos;
 import dao.CursoDao;
+import modelo.Curso;
 
 @WebServlet("/index.html")
 public class Principal extends HttpServlet {
@@ -18,9 +19,9 @@ public class Principal extends HttpServlet {
 	protected void doGet(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
 		// obter a lista de cursos
-		Cursos obj = CursoDao.getInstance().getCursos();
+		List<Curso> lista = CursoDao.getInstance().getCursos();
 		// salvar os cursos na sessao http
-		request.getSession().setAttribute("cursos", obj);
+		request.getSession().setAttribute("cursos", lista);
 		// redirecionar para o jsp que monta a lista
 		response.sendRedirect("lista.jsp");
 	}

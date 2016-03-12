@@ -25,15 +25,15 @@
 		
 		<fieldset>
 			<h2>Cadastro de Cursos</h2>
-			<h3>Total de Cursos Cadastrados: <c:out value="${cursos.count}" /></h3>
+			<h3>Total de Cursos Cadastrados: <c:out value="${cursos.size()}" /></h3>
 			<c:choose>
-				<c:when test="${cursos.count > 0}">
+				<c:when test="${cursos.size() > 0}">
 					<form id="form1" action="deletaCurso" method="post">
 						<div id="flex">
 							<b data-col='1'>Del</b>
 							<b data-col='2'>Nome</b>
 							<b data-col='3'>Descrição</b>
-							<c:forEach var="obj" items="${cursos.itens}">
+							<c:forEach var="obj" items="${cursos}">
 								<input type="checkbox" name="del" value="${obj.id}" data-col='1'>
 								<span data-col='2'><c:out value="${obj.nome}" /></span>
 								<span data-col='3'><c:out value="${obj.descr}" /></span>

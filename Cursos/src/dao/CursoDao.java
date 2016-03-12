@@ -45,7 +45,7 @@ public class CursoDao {
 		}
 	}
 		
-	public Cursos getCursos() {
-		return new Cursos(Collections.synchronizedList(lista));
+	public List<Curso> getCursos() {
+		return Collections.synchronizedList(new ArrayList<>(lista));
 	}
 }
