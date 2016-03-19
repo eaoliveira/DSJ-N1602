@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<title>Escola</title>
+<link rel="stylesheet" type="text/css" href="styles/style.css"/>
+<link rel="stylesheet" type="text/css" href="styles/jquery-ui.css"/>
+<script src="scripts/jquery-1.7.1.js"></script>
+<script src="scripts/js-webshim/minified/extras/modernizr-custom.js"></script>
+<script src="scripts/js-webshim/minified/polyfiller.js"></script>
+<script src="scripts/jquery-ui.js"></script>
+<script>
+	$.webshims.setOptions('forms-ext', { replaceUI : false });
+	$.webshims.polyfill('forms-ext');
+</script>
+</head>
+<body>
+	<div id="wrapper">
+		<header role="banner" class="group">
+			<div id="logo">Catálogo de Datas</div>
+		</header>
+
+		<div id="content" role="main">
+			<fieldset>
+				<h2>Novo Curso</h2>
+				<form id="form1" action="verificaData" method="post">
+					<div>
+						<label for="nascimento">Data de Nascimento</label>
+						<input type="text" name="nascimento" id="nascimento" data-cal='date' required>
+					</div><div>
+						<label for="formatura">Data de Formatura</label>
+						<input type="text"  name="formatura" data-cal='date' required />
+					</div>
+					<div>
+						<input type="button" id="submitL" value="Voltar" 
+							onclick="window.location.replace('index.html');">
+						<input type="submit" id="submit" value="Salvar"> 
+					</div>
+					<script>
+ 							 if (navigator.userAgent.indexOf("rv:11.0", 0) > -1) {
+								 $("input[data-cal='date']").datepicker({ dateFormat: "dd/mm/yy"})
+							 } else {								
+							     $( "input[data-cal='date']" ).datepicker({ dateFormat: "dd/mm/yy"});
+							 }</script>
+				</form>
+			</fieldset>
+		</div>
+
+	</div>
+</body>
+</html>
