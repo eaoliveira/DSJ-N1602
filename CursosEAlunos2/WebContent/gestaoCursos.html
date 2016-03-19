@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<title>Escola</title>
+<link rel="stylesheet" type="text/css" href="styles/style.css">
+<script src="scripts/jquery-1.7.1.js"></script>
+<script src="scripts/js-webshim/minified/extras/modernizr-custom.js"></script>
+<script src="scripts/js-webshim/minified/polyfiller.js"></script>
+<script>
+	$.webshims.setOptions('forms-ext', { replaceUI : false });
+	$.webshims.polyfill('forms-ext');
+</script>
+</head>
+<body>
+	<div id="wrapper">
+		<header role="banner" class="group">
+			<div id="logo">Escola 1/2 Boca</div>
+			<nav role="navigation">
+				<ul id="mainNav">
+					<li><a href="gestaoCursos.html">Gestão de Cursos</a></li>
+					<li><a href="cadAluno.html">Matrícula de Alunos</a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<div id="content" role="main">
+			<fieldset>
+				<hgroup>
+					<h2>Gestão de Cursos</h2>
+					<h3>Inclua novos <em>Cursos</em> ou <em>Consulte</em> os Cursos cadastrados nas opções abaixo</h3>
+				</hgroup>
+				<ul>
+					<li><a href="cadCurso.html">Cadastro de Cursos</a></li>
+					<li><a href="listaCursos">Lista dos Cursos Cadastrados</a></li>
+				</ul>
+			</fieldset>
+		</div>
+
+	</div>
+</body>
+</html>
