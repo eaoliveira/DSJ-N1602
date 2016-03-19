@@ -513,7 +513,7 @@ input:focus:valid {
 		font-size: 1.2em;  
 	}
 	#form1 input#submit {
-		font-size: 0.7em;
+		font-size: 0.8em;
 	}
 	#form1 input#submitL {
 		font-size: 0.8em;
@@ -593,7 +593,7 @@ input:focus:valid {
 		font-size: 1.2em;
 	}
 	#form1 input#submit {
-		font-size: 0.7em;
+		font-size: 1em;
 	}
 	#form1 input#submitL {
 		font-size: 1em;
