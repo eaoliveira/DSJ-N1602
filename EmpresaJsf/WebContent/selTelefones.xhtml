@@ -1,0 +1,29 @@
+<!DOCTYPE  html>
+ <html xmlns="http://www.w3.org/1999/xhtml"
+ 	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:jsf="http://xmlns.jcp.org/jsf">
+
+<ui:composition template="base.xhtml">
+	<ui:define name="conteudo">
+			<fieldset>
+				<hgroup>
+					<h2>Lista dos Telefones Cadastrados</h2>
+				</hgroup>
+				<h:form id="form1">
+					<div>
+						<label for="funcionario">Funcionário</label>
+						<h:selectOneMenu value="#{selecionaFunc.funcionario}" id="funcionario">
+							<f:selectItems value="#{selecionaFunc.funcionarios}" var="func" 
+								itemLabel="#{func.nome}" itemValue="#{func.id}"/>
+						</h:selectOneMenu>
+					</div><div>
+						<input type="submit" id="submit" value="Seleciona Funcionário" 
+								jsf:action="#{selecionaFunc.seleciona()}"/>
+					</div>
+				</h:form>
+			</fieldset>
+	</ui:define>
+</ui:composition>
+</html>

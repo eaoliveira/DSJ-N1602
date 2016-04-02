@@ -1,0 +1,44 @@
+<!DOCTYPE  html>
+ <html xmlns="http://www.w3.org/1999/xhtml"
+ 	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:jsf="http://xmlns.jcp.org/jsf">
+
+<ui:composition template="base.xhtml">
+	<ui:define name="conteudo">
+			<fieldset>
+				<hgroup>
+					<h2>Lista dos Fucionários Cadastrados</h2>
+				</hgroup>
+				<h:form id="form1">
+					<h:dataTable value="#{funcionario.lista}" var="item">
+						<h:column>
+							<f:facet name="header">Del</f:facet>
+							<h:selectBooleanCheckbox value="#{item.del}" />
+						</h:column>
+						<h:column>
+							<f:facet name="header">Nome</f:facet>
+							<h:outputText value="#{item.nome}" />
+						</h:column>
+						<h:column>
+							<f:facet name="header">Matrícula</f:facet>
+							<h:outputText value="#{item.matricula}" />
+						</h:column>
+					</h:dataTable>
+					<div>
+						<input type="submit" id="submit" value="Apagar Funcioánrio(s)" 
+								jsf:action="#{funcionario.remover()}"/>
+					</div>	
+				</h:form>
+				<div id="dialogo" class="modalDialog" jsf:rendered='#{funcionario.mensagem != null}'>
+					<div>
+						<a href="" title="Close" class="close" onclick='$("div#dialogo").hide()'>X</a>
+						<h2><h:outputText value="#{funcionario.titulo}" /></h2>
+						<p><h:outputText value="#{funcionario.mensagem}" /></p>
+					</div>
+				</div>
+			</fieldset>
+	</ui:define>
+</ui:composition>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE  html>
+ <html xmlns="http://www.w3.org/1999/xhtml"
+ 	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:jsf="http://xmlns.jcp.org/jsf">
+
+<ui:composition template="base.xhtml">
+	<ui:define name="conteudo">
+			<fieldset>
+				<hgroup>
+					<h2>Lista dos Telefones Cadastrados</h2>
+				</hgroup>
+				<h:form id="form1">
+					<div>
+						<label for="funcionario">Funcionário</label>
+						<h:outputLabel value="#{selecionaFunc.nome}" />
+					</div>
+					<h:dataTable value="#{selecionaFunc.fones}" var="fone">
+						<h:column>
+							<f:facet name="header">Del</f:facet>
+							<h:selectBooleanCheckbox value="#{fone.del}" />
+						</h:column>
+						<h:column>
+							<f:facet name="header">DDD</f:facet>
+							<h:outputLabel value="#{fone.ddd}" />
+						</h:column>
+						<h:column>
+							<f:facet name="header">DDD</f:facet>
+							<h:outputLabel value="#{fone.numero}" />
+						</h:column>
+					</h:dataTable>
+					<div>
+						<input type="submit" id="submit" value="Apagar Telefone(s)" 
+								jsf:action="#{selecionaFunc.remover()}"/>
+					</div>	
+				</h:form>
+				<div id="dialogo" class="modalDialog" jsf:rendered='#{selecionaFunc.mensagem != null}'>
+					<div><h:form>
+						<a href="" title="Close" class="close"  jsf:action="#{selecionaFunc.reset()}">X</a>
+						<h2><h:outputText value="#{selecionaFunc.titulo}" /></h2>
+						<p><h:outputText value="#{selecionaFunc.mensagem}" /></p></h:form>
+					</div>
+				</div>
+			</fieldset>
+	</ui:define>
+</ui:composition>
+</html>
