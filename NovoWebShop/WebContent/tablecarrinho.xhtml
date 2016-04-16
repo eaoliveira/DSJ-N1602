@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:a4j="http://richfaces.org/a4j"
+	xmlns:rich="http://richfaces.org/rich">
+<f:view>
+	<h:head>
+		<meta http-equiv="Content-Type"
+			content="text/html; charset=ISO-8859-1" />
+		<title>Web Shop - Meu Carrinho</title>
+	</h:head>
+	<h:body>
+		<h3>-- e - S h o p -- Meu Carrinho</h3>
+		<hr />
+		<h:form id="form">
+			<h:panelGrid columns="3">
+				<h:commandLink action="index.jsf">
+					<h:outputText value="Retorne às Compras" />
+				</h:commandLink>
+				<h:commandLink action="finalizacompra.jsf">
+					<h:outputText value="Finaliza a Compra" id="msg" />
+				</h:commandLink>
+				<rich:message for="msg" />
+			</h:panelGrid>
+		</h:form>
+		<rich:panel>
+			<f:facet name="header">
+				<h:outputText value="Itens do Carrinho"></h:outputText>
+			</f:facet>
+			<rich:dataTable value="#{carrinho.lista}" var="item" rows="5"
+				id="table" width="99%" >
+				
+				<rich:column>
+					<h:graphicImage value="#{item.imagem}" />
+				</rich:column>
+				
+				<rich:column>
+					<f:facet name="header">
+						<h:outputText value="Descrição" />
+					</f:facet>
+					<h:panelGrid columns="1">
+						<h:outputText value="#{item.descricao}" />
+						<h:form>
+							<h:commandButton value="Remover" actionListener="#{carrinho.removeItem}">
+								<f:attribute value="#{item.codigo}" name="codigo" />
+							</h:commandButton>
+						</h:form>
+					</h:panelGrid>
+				</rich:column>
+				
+				<rich:column>
+					<f:facet name="header">
+						<h:outputText value="Quantidade" />
+					</f:facet>
+					<h:form>
+						<h:panelGrid columns="1">
+							<h:inputText value="#{item.quantidade}" size="3" />
+							<h:commandButton value="Alterar"  actionListener="#{produto.alteraQuantidade}" >
+								<f:attribute name="objeto" value="#{item}"/>
+							</h:commandButton>
+						</h:panelGrid>
+					</h:form>
+				</rich:column>
+				
+				<rich:column>
+					<f:facet name="header">
+						<h:outputText value="Total" />
+					</f:facet>
+					<h:outputText value="#{item.total}">
+						<f:convertNumber pattern="R$ #,##0.00" />
+					</h:outputText>
+				</rich:column>
+				
+				<f:facet name="footer">
+					<rich:column>
+						<h:outputText value="#{carrinho.total}">
+							<f:convertNumber pattern="Total do Carrinho: R$ #,##0.00" />
+						</h:outputText>
+					</rich:column>
+				</f:facet>
+			</rich:dataTable>
+		</rich:panel>
+		<hr />
+	</h:body>
+</f:view>
+</html>
