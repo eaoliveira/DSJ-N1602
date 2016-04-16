@@ -26,3 +26,15 @@ http://lea.verou.me/css3patterns/
 Site que apresenta os códigos Unicode para Símbolos utilizados em páginas Web
 
 http://unicode-table.com/en/sets/stars-symbols/
+
+-------------------------------------------------------------------
+
+Site de apresentação das Características do RichFaces (Recomendo)
+
+http://showcase.richfaces.org
+
+-------------------------------------------------------------------
+
+Site com exemplos de código (Java, JSF, JPA, etc)
+
+http://www.java2s.com/Tutorials/Java/JSF/index.htm
