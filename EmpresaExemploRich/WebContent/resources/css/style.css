@@ -1,0 +1,66 @@
+body {
+	font: 12px Arial;
+	margin: 0px;
+	background-color: #D8FAFF;
+}
+
+h1 {
+	margin: 0 15px 0;
+	padding: 12px 0;
+	color: #000000;
+	font: bold 40px Arial;
+}
+
+h3 {
+	width: 40%;
+	margin: 0 auto;
+	font: 24px Trebuchet MS;
+	color: #000069;
+}
+
+#header {
+	background-image:
+		url("/EmpresaExemploRich/resources/images/banner1.jpg");
+	background-repeat: repeat-x;
+	padding: 0px 0px 0px 0px;
+}
+
+#conteudo {
+	width: 100%;
+	margin: 0px 0px 10px 10px;
+	text-align: left;
+	height: 100%;
+	font-size: 14px;
+}
+
+#titulo h1 {
+	line-height: 45px;
+	color: #ffffff;
+}
+
+#footer {
+	position: absolute;
+	bottom: 0px;
+	width: 100%;
+	height: 60px;
+}
+
+#footer h4 {
+	color: #000069;
+	font-size: 12px;
+	margin-top: 0px;
+}
+
+.fieldSet {
+	width: 40%;
+	margin: 0 auto;
+	padding: 0 0 0 0;
+	background-color: #D8FAFF;
+	border-color: #D8FAFF;
+}
+
+.actionButtonPanel {
+	position: relative;
+	margin-right: auto;
+	margin-left: 9px;
+}
