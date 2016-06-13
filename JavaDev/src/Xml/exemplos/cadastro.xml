@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE cadastro SYSTEM "cadastro.dtd" >
+<cadastro>
+	<pessoa idade="22">
+		<nome>José de Almeira</nome>
+		<email>jaalme@gmail.com</email>
+	</pessoa>
+	<pessoa idade="34">
+		<nome>Maria das Graças</nome>
+		<email>mariag@uo.com.br</email>
+	</pessoa>
+	<pessoa idade="39">
+		<nome>João Carlos Souza</nome>
+		<email>carlos.souza@bol.com.br</email>
+	</pessoa>
+</cadastro>
