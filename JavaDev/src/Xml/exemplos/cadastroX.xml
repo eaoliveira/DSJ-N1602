@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="cadastroX.xsl" ?>
+<!-- DOCTYPE cadastro SYSTEM "cadastroX.dtd" -->
+<cadastro>
+	<cliente>
+		<nome idade="21">João da Silva</nome>
+		<email>joao.silva@gmail.com</email>
+	</cliente>
+	<cliente codigo="1234">
+		<nome idade="31">José da Silva</nome>
+		<email>jsilva@gmail.com</email>
+	</cliente>
+</cadastro>
