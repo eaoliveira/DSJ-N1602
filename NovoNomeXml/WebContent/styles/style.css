@@ -1,0 +1,45 @@
+body {
+	background: url( "../images/Nature_Landscape753.jpg") no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	background-size: cover;
+}
+
+.Tabela {
+	font-family: 'Arial', sans-serif;
+	font-size: 1rem;
+	display: table;
+}
+
+.Titulo {
+	display : table-caption;
+	text-align: center;
+	font-weight: bold;
+	font-size: larger;
+}
+
+.Cabecalho {
+		display: table-row;
+		font-weight: bold;
+		text-align: center;
+}
+
+.Linha {
+	display: table-row;
+}
+
+.Celula {
+	display: table-cell;
+	border: solid;;
+	border-width: thin;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+.Centralizado {
+	text-align: center;
+}
+
+#zone {
+	background: #ffffff;
+}
