@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<title>Servlets</title>
+<link rel="stylesheet" type="text/css" href="style/style.css">
+</head>
+<body>
+	<div id="wrapper">
+		<header role="banner" class="group">
+			<div id="logo">QUIZ</div>
+		</header>
+
+		<div id="content" role="main">
+			<fieldset>
+				<h2>Qual sua idade?</h2>
+				<form id="form1" action="cadastraVoto">
+					<div id="center">
+						<div data-row>
+							<input id="r18" type="radio" value="ate18" name="voto"> 
+							<label for="r18">Até 18</label>
+						</div><div data-row>
+							<input id="r18" type="radio" value="ate26" name="voto"> 
+							<label for="r18">entre 19 e 26</label>
+						</div><div data-row>
+							<input id="r18" type="radio" value="ate35" name="voto"> 
+							<label for="r18">entre 27 e 35</label>
+						</div><div data-row>
+							<input id="r18" type="radio" value="acima35" name="voto">
+							<label for="r18">acima de 35</label>
+						</div>
+					</div>
+					<div data-row>
+						<input type="submit" id="submitL" value="Lista Respostas" formaction="listaVoto"> 
+						<input type="submit" id="submit" value="Enviar">
+					</div>
+				</form>
+			</fieldset>
+		</div>
+
+	</div>
+</body>
+</html>
