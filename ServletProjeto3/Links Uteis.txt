@@ -23,6 +23,12 @@ http://lea.verou.me/css3patterns/
 
 -------------------------------------------------------------------
 
+Site com tutorial para o CSS3 Flex
+
+https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+
+-------------------------------------------------------------------
+
 Site que apresenta os códigos Unicode para Símbolos utilizados em páginas Web
 
 http://unicode-table.com/en/sets/stars-symbols/
