@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- no arquivo de configuração "standalone.xml" do servidor  altere
+	a configuração de servlet-conteiner acrescentando o atributo default-encoding 
+     para que as transações Servlet -> JSP fluam utilizando UTF-8 como padrão -->
+            <servlet-container name="default" default-encoding="UTF-8">
+                <jsp-config/>
+                <websockets/>
+            </servlet-container>
